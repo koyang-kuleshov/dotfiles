@@ -133,3 +133,5 @@ let g:SimpylFold_docstring_preview = 1
 " let g:SimpylFold_fold_import = 1    " Fold imports
 " letn b:SimpylFold_fold_import = 1    " Fold imports (buffer local)
 
+set list          " Display unprintable characters f12 - switches
+set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
