@@ -3,4 +3,5 @@ autoload/
 bundle/
 plugged/
 session/
+.ropeproject/
 

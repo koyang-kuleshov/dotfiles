@@ -1,4 +1,4 @@
-"" Local vim.init 
+"" Local vim.init
 
 "" Set Esc to active in normal mode in terminal
 :tnoremap <Esc> <C-\><C-n>
@@ -15,9 +15,9 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " Отключаем бэкапы и своп-файлы
-"set nobackup 	     " no backup files
+"set nobackup     " no backup files
 "set nowritebackup   " only in case you don't want a backup file while editing
-set noswapfile 	     " no swap files
+set noswapfile     " no swap files
 
 "" При переходе за границу в 80 символов в Ruby/Python/js/C/C++ подсвечиваем на темном фоне текст
 augroup vimrc_autocmds
@@ -34,17 +34,29 @@ set cursorline
 vnoremap <C-c> "*Y :let @+=*<CR>
 map <C-p> "+P
 
-colorscheme gruvbox-material
-let g:airline_theme = 'gruvbox_material'
-let g:gruvbox_material_background = 'hard'
-set background=dark
-noremap <C-sd> set background=dark<CR>
-nnoremap <C-sl> set background=light<CR>
+map <F12> :call ToggleBg()<CR>
+function! ToggleBg()
+    if &background == 'dark'
+        color lucius
+        set background=light
+    else
+        let g:airline_theme = 'gruvbox_material'
+        let g:gruvbox_material_background = 'hard'
+        set background=dark
+        colorscheme gruvbox-material
+    endif
+endfunc
 "=====================================================
 "Autosave congig
 " ====================================================
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+
+"=====================================================
+"VimCommander congig
+" ====================================================
+noremap <silent> <F9> :cal VimCommanderToggle()<CR>
+
 
 "=====================================================
 "CTRLP settings
@@ -135,3 +147,54 @@ let g:SimpylFold_docstring_preview = 1
 
 set list          " Display unprintable characters f12 - switches
 set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
+
+
+"=====================================================
+" Python-mode setting
+"=====================================================
+let g:pymode_indent = 1
+let g:pymode_motion = 1
+" отключаем автокомплит по коду (у нас вместо него используется jedi-vim)
+" let g:pymode_rope = 0
+" let g:pymode_rope_completion = 0
+" let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope = 1
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 1
+
+" Удаляет whitespaces после сохранения
+let g:pymode_trim_whitespaces = 1
+
+" документация
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+
+" проверка кода
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pylint, pyflakes,pep8"
+" let g:pymode_lint_ignore="E501,W601,C0110"
+let g:pymode_lint_ignore=""
+
+" провека кода после сохранения
+let g:pymode_lint_on_write = 1
+
+" поддержка virtualenv
+let g:pymode_virtualenv = 1
+
+" установка breakpoints
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_key = '<leader>b'
+
+" подстветка синтаксиса
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" отключить autofold по коду
+let g:pymode_folding = 0
+" let g:pymode_folding = 1
+
+" возможность запускать код
+let g:pymode_run = 1
+
