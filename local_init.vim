@@ -34,6 +34,10 @@ set cursorline
 vnoremap <C-c> "*Y :let @+=*<CR>
 map <C-p> "+P
 
+let g:airline_theme = 'gruvbox_material'
+let g:gruvbox_material_background = 'hard'
+set background=dark
+colorscheme gruvbox-material
 map <F12> :call ToggleBg()<CR>
 function! ToggleBg()
     if &background == 'dark'
@@ -176,6 +180,7 @@ let g:pymode_lint_checker = "pylint, pyflakes,pep8"
 let g:pymode_lint_ignore=""
 
 " провека кода после сохранения
+let g:pymode_lint_write = 1
 let g:pymode_lint_on_write = 1
 
 " поддержка virtualenv
