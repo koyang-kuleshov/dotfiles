@@ -124,3 +124,10 @@ alias pip='pip3'
 
 # Set breakpoint() in Python to call pudb
 export PYTHONBREAKPOINT="pudb.set_trace"
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/home/ma5ta/yandex-cloud/path.bash.inc' ]; then source '/home/ma5ta/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/home/ma5ta/yandex-cloud/completion.bash.inc' ]; then source '/home/ma5ta/yandex-cloud/completion.bash.inc'; fi
+

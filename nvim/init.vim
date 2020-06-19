@@ -65,7 +65,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 "" Color
-" Plug 'tomasr/molokai'
+Plug 'tomasr/molokai'
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
@@ -78,14 +78,12 @@ Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
 
 
-" javascript
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
 
 
-" python
-"" Python Bundle
-" Plug 'davidhalter/jedi-vim'
+" Python Bundle
+Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 
@@ -250,7 +248,6 @@ let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-"" nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
 
 " grep.vim
@@ -378,6 +375,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=['~/.config/nvim/plugged/ultisnips/', 'UltiSnips']
 
 " ale
 let g:ale_linters = {}
@@ -466,19 +464,20 @@ augroup vimrc-python
 augroup END
 
 " jedi-vim
+call jedi#configure_call_signatures()
 let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_assignments_command = "<leader>a"
 let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
+let g:jedi#documentation_command = "M-k"
 let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
+let g:jedi#rename_command = "<leader>t"
+let g:jedi#show_call_signatures = "1"
+let g:jedi#completions_command = "<C-n>"
+let g:jedi#smart_auto_mappings = 1
 
 " ale
 :call extend(g:ale_linters, {
-    \'python': ['flake8'], })
+    \'python': [], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
@@ -491,7 +490,6 @@ let python_highlight_all = 1
 
 " typescript
 let g:yats_host_keyword = 1
-
 
 
 " vuejs
@@ -546,5 +544,4 @@ else
   let g:airline_right_alt_sep = ''
   let g:airline_symbols.branch = ''
   let g:airline_symbols.readonly = ''
-  let g:airline_symbols.linenr = ''
 endif
