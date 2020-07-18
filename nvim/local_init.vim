@@ -169,7 +169,7 @@ let g:pymode_motion = 1
 
 " Autocompletion
 let g:pymode_rope = 1
-let g:pymode_rope_completion = 0
+let g:pymode_rope_completion = 1
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_autoimport = 1
 let g:pymode_rope_regenerate_on_write = 1
@@ -183,11 +183,19 @@ let g:pymode_doc_key = 'M-k'
 
 " Linters
 let g:pymode_lint = 1
-let g:pymode_lint_checker = "pylint, pyflakes,pep8"
-let g:pymode_lint_ignore="E501,W601,C0110, C0200, E402"
+let g:pymode_lint_checker = ['pylint', 'pyflakes', 'pep8']
+let g:pymode_lint_ignore= ["E501", "W601", "C0110", "C0200", "E402"]
 let g:pymode_lint_cwindow = 0
 let g:pymode_lint_sort = ['E', 'C', 'I', 'W']
-let g:pymode_lint_unmodified = 0
+let g:pymode_lint_unmodified = 1
+let g:pymode_lint_message = 1
+let g:pymode_lint_signs = 1
+let g:pymode_lint_todo_symbol = 'WW'
+let g:pymode_lint_comment_symbol = 'CC'
+let g:pymode_lint_visual_symbol = 'RR'
+let g:pymode_lint_error_symbol = 'EE'
+let g:pymode_lint_info_symbol = 'II'
+let g:pymode_lint_pyflakes_symbol = 'FF'
 
 " Virtualenv
 let g:pymode_virtualenv = 1

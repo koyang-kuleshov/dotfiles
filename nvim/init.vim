@@ -160,6 +160,7 @@ let g:session_command_aliases = 1
 "" Visual Settings
 "*****************************************************************************
 syntax on
+let python_highlight_all = 1
 set ruler
 set number
 
@@ -464,16 +465,16 @@ augroup vimrc-python
 augroup END
 
 " jedi-vim
-call jedi#configure_call_signatures()
-let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = "<leader>a"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "M-k"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>t"
-let g:jedi#show_call_signatures = "1"
-let g:jedi#completions_command = "<C-n>"
-let g:jedi#smart_auto_mappings = 1
+" call jedi#configure_call_signatures()
+" let g:jedi#popup_on_dot = 0
+" let g:jedi#goto_assignments_command = "<leader>a"
+" let g:jedi#goto_definitions_command = "<leader>d"
+" let g:jedi#documentation_command = "M-k"
+" let g:jedi#usages_command = "<leader>n"
+" let g:jedi#rename_command = "<leader>t"
+" let g:jedi#show_call_signatures = "0"
+" let g:jedi#completions_command = "<C-n>"
+" let g:jedi#smart_auto_mappings = 1
 
 " ale
 :call extend(g:ale_linters, {
