@@ -24,6 +24,11 @@ endif
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
 
+" Syntax highlight
+" Default highlight is better than polyglot
+let python_highlight_all = 1
+let g:polyglot_disabled = ['python']
+
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
@@ -483,10 +488,6 @@ augroup END
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
 
-" Syntax highlight
-" Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
-let python_highlight_all = 1
 
 
 " typescript
