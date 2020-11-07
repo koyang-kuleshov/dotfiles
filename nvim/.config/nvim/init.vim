@@ -57,7 +57,7 @@ Plug 'junegunn/fzf.vim'
 endif
 let g:make = 'gmake'
 if exists('make')
-    let g:make = 'make'
+let g:make = 'make'
 endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 
@@ -178,12 +178,12 @@ set guioptions=egmrti
 set gfn=Monospace\ 10
 
 if has("gui_running")
-    if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h12
-        set transparency=7
-    endif
-    else
-        let g:CSApprox_loaded = 1
+if has("gui_mac") || has("gui_macvim")
+    set guifont=Menlo:h12
+    set transparency=7
+endif
+else
+    let g:CSApprox_loaded = 1
 
     " IndentLine
     let g:indentLine_enabled = 1
@@ -385,6 +385,14 @@ let g:UltiSnipsSnippetDirectories=['~/.config/nvim/plugged/ultisnips/', 'UltiSni
 
 " ale
 let g:ale_linters = {}
+let g:ale_fixers = {
+\   'python': ['add_blank_lines_for_python_control_statements'],
+\   '*': ['remove_trailing_lines']
+\   }
+let g:ale_fix_on_save = 1
+let g:ale_python_pylint_options = '--disable=import-error'
+nmap <silent> <leader>k <Plug>(ale_previous_wrap)
+nmap <silent> <leader>j <Plug>(ale_next_wrap)
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -483,7 +491,7 @@ augroup END
 
 " ale
 :call extend(g:ale_linters, {
-    \'python': [], })
+    \'python': ['pylint', 'pycodestyle'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1

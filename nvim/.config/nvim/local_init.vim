@@ -184,6 +184,8 @@ let g:pymode_doc_key = 'M-k'
 " Linters
 let g:pymode_lint = 0
 let g:pymode_lint_checker = ['pylint', 'pyflakes', 'pep8']
+" let g:pymode_lint_checker = ['pep8']
+" let g:pymode_lint_checker = ['pyflakes']
 let g:pymode_lint_ignore= ['E501', 'W601', 'C0110', 'C0200', 'E402']
 let g:pymode_lint_cwindow = 0
 let g:pymode_lint_sort = ['E', 'C', 'I', 'W']
