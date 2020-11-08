@@ -6,7 +6,7 @@
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
 let g:vim_bootstrap_langs = "html,javascript,python,typescript"
-let g:vim_bootstrap_editor = "nvim"				" nvim or vim
+let g:vim_bootstrap_editor = "nvim" " nvim or vim
 
 if !filereadable(vimplug_exists)
   if !executable("curl")
@@ -385,12 +385,17 @@ let g:UltiSnipsSnippetDirectories=['~/.config/nvim/plugged/ultisnips/', 'UltiSni
 
 " ale
 let g:ale_linters = {}
+let g:ale_python_flake8_use_global = 1
+let g:ale_python_pylint_options = '--disable=import-error'
+let g:ale_linters_ignore = {'python': ['pylint']}
 let g:ale_fixers = {
-\   'python': ['add_blank_lines_for_python_control_statements'],
 \   '*': ['remove_trailing_lines']
 \   }
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_filetype_changed = 0
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_insert_leave = 0
 let g:ale_fix_on_save = 1
-let g:ale_python_pylint_options = '--disable=import-error'
 nmap <silent> <leader>k <Plug>(ale_previous_wrap)
 nmap <silent> <leader>j <Plug>(ale_next_wrap)
 
@@ -491,7 +496,7 @@ augroup END
 
 " ale
 :call extend(g:ale_linters, {
-    \'python': ['pylint', 'pycodestyle'], })
+    \'python': ['pylint', 'pycodestyle', 'flake8'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
