@@ -148,9 +148,10 @@ noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
 " SimplyFold settings
 "=====================================================
 " set nofoldenable
-let g:SimpylFold_docstring_preview = 0
-let g:SimpylFold_fold_docstring = 1 " Fold docstrings
-let b:SimpylFold_fold_docstring = 1 " Fold docstrings (buffer local)
+set foldmethod=indent
+let g:SimpylFold_docstring_preview = 1
+let g:SimpylFold_fold_docstring = 0 " Fold docstrings
+let b:SimpylFold_fold_docstring = 0 " Fold docstrings (buffer local)
 let g:SimpylFold_fold_import = 0    " Fold imports
 let b:SimpylFold_fold_import = 0    " Fold imports (buffer local)
 
@@ -162,7 +163,7 @@ set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars map
 " Python-mode setting
 "=====================================================
 " Autofold
-let g:pymode_folding = 1
+let g:pymode_folding = 0
 
 let g:pymode_indent = 1
 let g:pymode_motion = 1

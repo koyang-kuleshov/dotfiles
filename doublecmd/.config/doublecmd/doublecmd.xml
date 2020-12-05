@@ -116,7 +116,7 @@
   <Tabs>
     <OpenedTabs>
       <Left>
-        <ActiveTab>2</ActiveTab>
+        <ActiveTab>1</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -222,7 +222,7 @@
                   <Path Filename="..">/home/ma5ta/Downloads/inlogspb.ru/</Path>
                   <Path Filename="3">/home/ma5ta/Downloads/</Path>
                   <Path Filename="..">/home/ma5ta/Downloads/3/</Path>
-                  <Path Filename="">/home/ma5ta/Downloads/</Path>
+                  <Path Filename="ОтзывРиверСтар.jpg">/home/ma5ta/Downloads/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -240,16 +240,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/usr/lib/doublecmd/</Path>
-                  <Path Filename="..">/usr/lib/</Path>
-                  <Path Filename="lib">/usr/</Path>
-                  <Path Filename="home">/</Path>
-                  <Path Filename="ma5ta">/home/</Path>
-                  <Path Filename="coding">/home/ma5ta/</Path>
-                  <Path Filename="..">/home/ma5ta/coding/</Path>
-                  <Path Filename="coding">/home/ma5ta/</Path>
-                  <Path Filename="scrapy-frog-express-seospider">/home/ma5ta/coding/</Path>
-                  <Path Filename="sf_express_seospider">/home/ma5ta/coding/scrapy-frog-express-seospider/</Path>
                   <Path Filename="output">/home/ma5ta/coding/scrapy-frog-express-seospider/sf_express_seospider/</Path>
                   <Path Filename="..">/home/ma5ta/coding/scrapy-frog-express-seospider/sf_express_seospider/output/</Path>
                   <Path Filename="..">/home/ma5ta/coding/scrapy-frog-express-seospider/sf_express_seospider/</Path>
@@ -276,7 +266,30 @@
                   <Path Filename="..">/home/ma5ta/coding/yandex_voice_and_translate_api/common/</Path>
                   <Path Filename="wav">/home/ma5ta/coding/yandex_voice_and_translate_api/</Path>
                   <Path Filename="..">/home/ma5ta/coding/yandex_voice_and_translate_api/wav/</Path>
-                  <Path Filename="activate">/home/ma5ta/coding/yandex_voice_and_translate_api/</Path>
+                  <Path Filename="..">/home/ma5ta/coding/yandex_voice_and_translate_api/</Path>
+                  <Path Filename="yandex_voice_and_translate_api">/home/ma5ta/coding/</Path>
+                  <Path Filename="..">/home/ma5ta/coding/yandex_voice_and_translate_api/</Path>
+                  <Path Filename="..">/home/ma5ta/coding/</Path>
+                  <Path Filename="dotfiles">/home/ma5ta/</Path>
+                  <Path Filename="doublecmd">/home/ma5ta/dotfiles/</Path>
+                  <Path Filename=".config">/home/ma5ta/dotfiles/doublecmd/</Path>
+                  <Path Filename="..">/home/ma5ta/dotfiles/doublecmd/.config/</Path>
+                  <Path Filename=".config">/home/ma5ta/dotfiles/doublecmd/</Path>
+                  <Path Filename="plank">/home/ma5ta/dotfiles/</Path>
+                  <Path Filename=".config">/home/ma5ta/dotfiles/plank/</Path>
+                  <Path Filename="..">/home/ma5ta/dotfiles/plank/.config/</Path>
+                  <Path Filename=".config">/home/ma5ta/dotfiles/plank/</Path>
+                  <Path Filename="pudb">/home/ma5ta/dotfiles/</Path>
+                  <Path Filename=".config">/home/ma5ta/dotfiles/pudb/</Path>
+                  <Path Filename="..">/home/ma5ta/dotfiles/pudb/.config/</Path>
+                  <Path Filename=".config">/home/ma5ta/dotfiles/pudb/</Path>
+                  <Path Filename="plank">/home/ma5ta/dotfiles/</Path>
+                  <Path Filename="..">/home/ma5ta/dotfiles/plank/</Path>
+                  <Path Filename="doublecmd">/home/ma5ta/dotfiles/</Path>
+                  <Path Filename="..">/home/ma5ta/dotfiles/doublecmd/</Path>
+                  <Path Filename="tmux">/home/ma5ta/dotfiles/</Path>
+                  <Path Filename="..">/home/ma5ta/dotfiles/tmux/</Path>
+                  <Path Filename="pudb">/home/ma5ta/dotfiles/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -300,28 +313,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/usr/lib/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/lib/</Path>
-                  <Path Filename="home">/</Path>
-                  <Path Filename="ma5ta">/home/</Path>
+                  <Path Filename="dock1">/home/ma5ta/.config/plank/</Path>
+                  <Path Filename="plank">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/plank/</Path>
+                  <Path Filename="pudb">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/pudb/</Path>
+                  <Path Filename="pudb">/home/ma5ta/.config/</Path>
                   <Path Filename=".config">/home/ma5ta/</Path>
-                  <Path Filename="nvim">/home/ma5ta/.config/</Path>
-                  <Path Filename="UltiSnips">/home/ma5ta/.config/nvim/</Path>
-                  <Path Filename="..">/home/ma5ta/</Path>
-                  <Path Filename="..">/mnt/D/Linux/Scaner Mustek BearPaw 2400 CU Plus/</Path>
-                  <Path Filename="YandexDisk">/mnt/D/</Path>
-                  <Path Filename="..">/mnt/D/YandexDisk/</Path>
-                  <Path Filename="..">/home/ma5ta/</Path>
-                  <Path Filename="..">/mnt/D/YandexDisk/</Path>
-                  <Path Filename="Google Disk">/mnt/D/</Path>
-                  <Path Filename="Music">/mnt/D/Google Disk/</Path>
-                  <Path Filename="Hail The Villain - Runaway.mp3">/mnt/D/Google Disk/Music/</Path>
-                  <Path Filename="..">/home/ma5ta/</Path>
-                  <Path Filename="..">/mnt/D/YandexDisk/</Path>
-                  <Path Filename="lyapota-pro-remont-kvartir.xlsx">/mnt/D/</Path>
-                  <Path Filename="Downloads">/home/ma5ta/</Path>
-                  <Path Filename="Translate and voice texts - Лист1.csv">/home/ma5ta/Downloads/</Path>
-                  <Path Filename="Downloads">/home/ma5ta/</Path>
+                  <Path Filename="flake8">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/flake8/</Path>
+                  <Path Filename="yandex-disk">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/yandex-disk/</Path>
+                  <Path Filename="Unknown Organization">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/Unknown Organization/</Path>
+                  <Path Filename="menus">/home/ma5ta/.config/</Path>
+                  <Path Filename="applications-merged">/home/ma5ta/.config/menus/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/menus/applications-merged/</Path>
+                  <Path Filename="applications-merged">/home/ma5ta/.config/menus/</Path>
+                  <Path Filename="guake">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/guake/</Path>
+                  <Path Filename="google-chrome">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/google-chrome/</Path>
+                  <Path Filename="gnome-session">/home/ma5ta/.config/</Path>
+                  <Path Filename="saved-session">/home/ma5ta/.config/gnome-session/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/gnome-session/saved-session/</Path>
+                  <Path Filename="saved-session">/home/ma5ta/.config/gnome-session/</Path>
+                  <Path Filename="gnome-control-center">/home/ma5ta/.config/</Path>
+                  <Path Filename="backgrounds">/home/ma5ta/.config/gnome-control-center/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/gnome-control-center/backgrounds/</Path>
+                  <Path Filename="backgrounds">/home/ma5ta/.config/gnome-control-center/</Path>
+                  <Path Filename="GIMP">/home/ma5ta/.config/</Path>
+                  <Path Filename="2.10">/home/ma5ta/.config/GIMP/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/GIMP/2.10/</Path>
+                  <Path Filename="2.10">/home/ma5ta/.config/GIMP/</Path>
+                  <Path Filename="gedit">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/gedit/</Path>
+                  <Path Filename="freeplane">/home/ma5ta/.config/</Path>
+                  <Path Filename="1.7.x">/home/ma5ta/.config/freeplane/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/freeplane/1.7.x/</Path>
+                  <Path Filename="1.7.x">/home/ma5ta/.config/freeplane/</Path>
+                  <Path Filename="discord">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/discord/</Path>
+                  <Path Filename="autostart">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/autostart/</Path>
+                  <Path Filename="autostart">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/autostart/</Path>
+                  <Path Filename="autostart">/home/ma5ta/.config/</Path>
+                  <Path Filename="..">/home/ma5ta/.config/autostart/</Path>
+                  <Path Filename="autostart">/home/ma5ta/.config/</Path>
+                  <Path Filename="thunderbird.desktop">/home/ma5ta/.config/autostart/</Path>
+                  <Path Filename="pop-shell">/home/ma5ta/.config/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -370,7 +411,7 @@
                   <Path Filename="IMG_20201201_154753-1.jpg">/mnt/D/Google Disk/TFV/Заказы на freelance/KWORK/round_avatar/2/</Path>
                   <Path Filename="..">/home/ma5ta/coding/</Path>
                   <Path Filename="..">/home/ma5ta/</Path>
-                  <Path Filename="">/home/ma5ta/coding/</Path>
+                  <Path Filename="..">/home/ma5ta/coding/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -391,7 +432,7 @@
               </Sorting>
             </Sortings>
             <History>
-              <Entry Active="True">
+              <Entry>
                 <FileSource Type="FileSystem"/>
                 <Paths>
                   <Path Filename="..">/usr/lib/doublecmd/</Path>
@@ -416,7 +457,17 @@
                   <Path Filename="Downloads">/home/ma5ta/</Path>
                   <Path Filename="Translate and voice texts - Лист1.csv">/home/ma5ta/Downloads/</Path>
                   <Path Filename="Downloads">/home/ma5ta/</Path>
-                  <Path Filename="Translate and voice texts - 3-12-2020.csv">/home/ma5ta/Downloads/</Path>
+                  <Path Filename="3">/home/ma5ta/Downloads/</Path>
+                  <Path Filename="..">/home/ma5ta/Downloads/3/</Path>
+                  <Path Filename="3">/home/ma5ta/Downloads/</Path>
+                  <Path Filename="">/home/ma5ta/Downloads/3/</Path>
+                </Paths>
+              </Entry>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/media/ma5ta/DCS/</Path>
+                  <Path Filename="..">/home/ma5ta/Downloads/</Path>
                 </Paths>
               </Entry>
             </History>
