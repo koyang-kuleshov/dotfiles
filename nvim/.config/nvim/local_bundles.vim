@@ -15,4 +15,4 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'lepture/vim-jinja'
 Plug 'lpenz/vimcommander'
-
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
