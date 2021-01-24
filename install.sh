@@ -11,6 +11,7 @@ sudo apt install -y thunderbird anki gimp telegram-desktop discord doublecmd-com
 
 # Stow
 echo "***** Stow settings *****"
+rm ../.bashrc ../.profile
 stow bash
 stow flake8
 stow git
