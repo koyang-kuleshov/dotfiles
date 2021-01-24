@@ -300,7 +300,7 @@ let g:mkdp_page_title = '「${name}」'
 let g:mkdp_filetypes = ['markdown']
 
 "=====================================================
-" LaTex settings
+" vimtex settings
 "=====================================================
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'

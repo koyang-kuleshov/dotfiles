@@ -197,7 +197,7 @@ endif
 
 "" Disable the blinking cursor.
 set gcr=a:blinkon0
-set scrolloff=3
+set scrolloff=8
 
 "" Status bar
 set laststatus=2
@@ -386,7 +386,7 @@ let g:UltiSnipsSnippetDirectories=['~/.config/nvim/plugged/ultisnips/', 'UltiSni
 let g:ale_linters = {}
 let g:ale_python_flake8_use_global = 1
 let g:ale_python_pylint_options = '--disable=import-error'
-let g:ale_linters_ignore = {'python': ['pylint']}
+" let g:ale_linters_ignore = {'python': ['pylint']}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines']
 \   }
@@ -394,7 +394,7 @@ let g:ale_lint_on_enter = 1
 let g:ale_lint_on_filetype_changed = 0
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_insert_leave = 1
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 nmap <silent> <leader>k <Plug>(ale_previous_wrap)
 nmap <silent> <leader>j <Plug>(ale_next_wrap)
 
@@ -482,8 +482,9 @@ augroup vimrc-python
 augroup END
 
 " ale
+" \'python': ['pylint', 'pycodestyle', 'flake8'], })
 :call extend(g:ale_linters, {
-    \'python': ['pylint', 'pycodestyle', 'flake8'], })
+    \'python': ['pylint', 'pycodestyle'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
