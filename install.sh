@@ -7,15 +7,16 @@ sudo apt install -y thunderbird anki gimp slack telegram-desktop discord double-
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
 
+sudo flatpak install Slack DBeaver Fractal
+
+# Stow
+cd ~/dotfiles
+stow bash flake8 git latexmk nvim pudb tmux
+
 # Yandex Disk
 cd ..
 sudo wget -O YANDEX-DISK-KEY.GP  http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG
 sudo apt-key add YANDEX-DISK-KEY.GPG
-echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" >>/etc/apt/sources.list.d/yandex-disk.list
+sudo echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" >>/etc/apt/sources.list.d/yandex-disk.list
 sudo apt update
 sudo apt install yandex-disk
-
-sudo flatpak install Slack Transmission DBeaver Fractal
-
-# Stow
-stow bash flake8 git latexmk nvim pudb tmux
