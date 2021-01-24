@@ -1,22 +1,37 @@
+echo "***** Update standart applications *****"
 sudo apt update
 sudo apt -y upgrade
-sudo apt install -y python3 python3-venv python3-pudb build-essential libssl-dev libffi-dev python3-dev exuberant-ctags pyflakes vim-gui-common nvim
-sudo apt install -y thunderbird anki gimp slack telegram-desktop discord double-cmd-common smplayer zathura zathura-djvu zathura-pdf-poppler stow htop tmux tilix mc keepassxc
+sudo apt install -y python3 python3-venv python3-pudb build-essential libssl-dev libffi-dev python3-dev exuberant-ctags pyflakes vim-gui-common neovim
+sudo apt install -y thunderbird anki gimp telegram-desktop discord doublecmd-common smplayer zathura zathura-djvu zathura-pdf-poppler stow htop tmux tilix mc keepassxc
+
+# echo "***** Install Flatpak applications *****"
+# sudo flatpak install flathub com.slack.Slack
+# sudo flatpak install io.dbeaver.DBeaverCommunity
+# sudo flatpak install flathub org.gnome.Fractal
+
+# Stow
+echo "***** Stow settings *****"
+stow bash
+stow flake8
+stow git
+stow latexmk
+stow nvim
+stow pudb
+stow tmux
 
 # Google Chrome
+echo "***** Google Chrome Install *****"
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
 
-sudo flatpak install Slack DBeaver Fractal
-
-# Stow
-cd ~/dotfiles
-stow bash flake8 git latexmk nvim pudb tmux
-
 # Yandex Disk
-cd ..
-sudo wget -O YANDEX-DISK-KEY.GP  http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG
-sudo apt-key add YANDEX-DISK-KEY.GPG
-sudo echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" >>/etc/apt/sources.list.d/yandex-disk.list
-sudo apt update
-sudo apt install yandex-disk
+echo "***** Yandex Disk Install *****"
+sudo wget http://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb
+sudo dpkg -i yandex-disk_latest_amd64.deb
+echo "For setup Yandex disk run yandex-disk setup"
+
+echo "***** Remove temporary files *****"
+sudo apt -y autoremove
+rm -f YANDEX-DISK-KEY.GPG 
+rm -f yandex-disk_latest_amd64.deb
+rm -f google-chrome-stable_current_amd64.deb
