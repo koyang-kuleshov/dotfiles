@@ -485,7 +485,7 @@ augroup END
 " ale
 " \'python': ['pylint', 'pycodestyle', 'flake8'], })
 :call extend(g:ale_linters, {
-    'python': ['pylint', 'pycodestyle'], })
+      \'python': ['pylint', 'pycodestyle'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
