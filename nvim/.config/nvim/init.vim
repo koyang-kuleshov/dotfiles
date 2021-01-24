@@ -393,10 +393,11 @@ let g:ale_fixers = {
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_filetype_changed = 0
 let g:ale_lint_on_text_changed = 0
-let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_insert_leave = 0
 let g:ale_fix_on_save = 0
 nmap <silent> <leader>k <Plug>(ale_previous_wrap)
 nmap <silent> <leader>j <Plug>(ale_next_wrap)
+nmap <silent> <leader>l :ALELint
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -484,7 +485,7 @@ augroup END
 " ale
 " \'python': ['pylint', 'pycodestyle', 'flake8'], })
 :call extend(g:ale_linters, {
-    \'python': ['pylint', 'pycodestyle'], })
+    'python': ['pylint', 'pycodestyle'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
