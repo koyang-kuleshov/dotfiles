@@ -2,7 +2,7 @@ echo "***** Update standart applications *****"
 sudo apt update
 sudo apt -y upgrade
 sudo apt install -y python3 python3-venv python3-pudb build-essential libssl-dev libffi-dev python3-dev exuberant-ctags pyflakes vim-gui-common neovim
-sudo apt install -y thunderbird anki gimp telegram-desktop discord doublecmd-common smplayer zathura zathura-djvu zathura-pdf-poppler stow htop tmux tilix mc keepassxc
+sudo apt install -y thunderbird anki gimp telegram-desktop discord doublecmd-common smplayer zathura zathura-djvu zathura-pdf-poppler stow htop tmux tilix mc keepassxc i3
 
 # echo "***** Install Flatpak applications *****"
 # sudo flatpak install flathub com.slack.Slack
@@ -19,6 +19,8 @@ stow latexmk
 stow nvim
 stow pudb
 stow tmux
+stow i3
+stow xsession
 
 # Google Chrome
 echo "***** Google Chrome Install *****"
