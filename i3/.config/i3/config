@@ -228,6 +228,7 @@ for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
 for_window [class="Anki" instance="anki" title="Add"] floating enable, resize set 680 480, move position center
 for_window [class="Anki" instance="anki" title="^Browse.+"] floating enable, resize set 1900 1040, move position center
 
+for_window [class="gimp"] fullscreen enable
 for_window [class="XCalc" instance="xcalc"] floating enable, resize set 230 420, move position center
 
 # Assignments
