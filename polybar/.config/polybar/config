@@ -1,21 +1,5 @@
-
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
 ;   To learn more about how to configure Polybar
 ;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
 
 [colors]
 ;background = ${xrdb:color0:#222}
@@ -52,6 +36,10 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
+;"Un-disable" bitmap fonts
+; sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
+; Clear the font cache
+; sudo fc-cache -f -v
 font-0 = fixed:pixelsize=14;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
@@ -61,20 +49,15 @@ modules-center = weather
 ; modules-right = filesystem xbacklight memory cpu battery temperature date powermenu
 
 ; Setings for desktop
-modules-right = xkeyboard pulseaudio memory cpu temperature date
+modules-right = pulseaudio xkeyboard memory cpu temperature date
 
 tray-position = right
 tray-padding = 2
 tray-detached = false
-;tray-background = #0063ff
+tray-background = #604387
 
-;wm-restack = bspwm
 ; wm-restack = i3
-
 ; override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -120,7 +103,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -247,7 +230,7 @@ interval = 5
 date = " %d-%m-%Y"
 date-alt = " %d-%m-%Y"
 
-time = %H:%M
+time = " %H:%M"
 time-alt = %H:%M:%S
 
 format-prefix = 
@@ -346,7 +329,7 @@ animation-discharging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 50
 
 format = <ramp> <label>
 format-underline = #f50a4d

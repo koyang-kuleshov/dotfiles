@@ -11,6 +11,7 @@
 
 # set $mod Mod4
 set $mod Mod4
+set $alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -47,14 +48,19 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
-bindsym $alt+f4 kill
+bindsym $alt+F4 kill
+
+# alt+tab for cycling workspace
+bindsym $alt+Tab workspace next
+bindsym $alt+Shift+Tab workspace prev
+bindsym $mod+Tab workspace prev
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+# bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -91,7 +97,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -198,18 +204,36 @@ bindsym $mod+r mode "resize"
 # Start polybar to display a workspace bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id --systray pavucontrol &
+exec --no-startup-id pasystray &
 exec --no-startup-id numlockx on
+
+# Autostart
+exec --no-startup-id keepassxc
+exec --no-startup-id google-chrome
+exec --no-startup-id doublecmd
+exec --no-startup-id thunderbird
+exec --no-startup-id telegram-desktop
+exec --no-startup-id telegram-desktop
 
 bindsym Print exec spectacle
 bindsym $mod+F10 exec pavucontrol
+bindsym XF86Calculator exec --no-startup-id xcacl
 
-#-------------#
-# ASSIGNMENTS #
-#-------------#
+# Special cases 
 
-assign [class="keepassxc"] 1
+# Telegram
+for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
+
+# Anki
+for_window [class="Anki" instance="anki" title="Add"] floating enable, resize set 680 480, move position center
+for_window [class="Anki" instance="anki" title="^Browse.+"] floating enable, resize set 1900 1040, move position center
+
+for_window [class="XCalc" instance="xcalc"] floating enable, resize set 230 420, move position center
+
+# Assignments
+
 assign [class="nvim"] 2
+assign [class="keepassxc"] 3
 assign [class="chrome" window_type="normal"] 3
 assign [class="firefox" window_type="normal"] 4
 assign [class="doublecmd" window_type="normal"] 6
