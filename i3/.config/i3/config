@@ -112,6 +112,15 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+# Show the sup-mail scratchpad window, if any.
+# bindsym $mod+Shift+s [title="^Sup ::"] scratchpad show
+
 # The right button toggles floating
 bindsym button3 floating toggle
 
@@ -236,6 +245,7 @@ exec --no-startup-id google-chrome
 exec --no-startup-id doublecmd
 exec --no-startup-id thunderbird
 exec --no-startup-id telegram-desktop
+exec --no-startup-id flatpak run com.slack.Slack
 
 bindsym Print exec spectacle
 bindsym $mod+F10 exec pavucontrol
@@ -249,7 +259,7 @@ for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
 # Anki
 for_window [class="Anki" instance="anki" title="Add"] floating enable, resize set 680 480, move position center
 for_window [class="Anki" instance="anki" title="^Browse.+"] floating enable, resize set 1900 1040, move position center
-for_window [class="Anki" instance="anki" title="^Edit.+"] floating enable, resize set 600 840, move position center
+for_window [class="Anki" instance="anki" title="^Edit.+"] floating enable, resize set 600 840, move position 120 300
 
 for_window [class="gimp"] fullscreen enable
 for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable, resize set 230 420, move position center

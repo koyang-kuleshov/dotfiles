@@ -8,7 +8,7 @@ window:
     y: 0
   dynamic_padding: false
 # Под декорациями имеется ввиду вид окна (transparent сделает края невидимыми)
-  decorations: full
+  decorations: none
 
   startup_mode: Fullscreen # Windowed - оконный, Maximized - оконный на весь экран, Fullscreen - на весь экран
 
@@ -28,7 +28,7 @@ font:
     italic:
       family: "Fira Code"
 
-    size: 15.0 # Размер шрифта
+    size: 18.0 # Размер шрифта
 
 #Отступы у шрифта
     offset:
