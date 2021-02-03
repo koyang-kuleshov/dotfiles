@@ -112,6 +112,25 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# The right button toggles floating
+bindsym button3 floating toggle
+
+# The middle button over a titlebar kills the window
+bindsym --release button2 kill
+
+# Workspaces assignements
+
+workspace 1 output DP-3
+workspace 2 output DP-3
+workspace 3 output DP-3
+workspace 4 output DP-3
+workspace 5 output DP-3
+workspace 6 output DP-3
+workspace 7 output DP-3
+workspace 8 output DP-3
+workspace 9 output DP-3
+workspace 10 output DP-5
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -205,6 +224,7 @@ bindsym $mod+r mode "resize"
 
 exec compton -f --vsync drm
 exec nitrogen --restore
+
 # Start polybar to display a workspace bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -236,8 +256,8 @@ for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enabl
 
 # Assignments
 
-assign [class="nvim"] 2
-assign [class="keepassxc"] 1
+assign [class="nvim"] 1
+assign [class="keepassxc"] 10
 assign [class="chrome" window_type="normal"] 3
 assign [class="firefox" window_type="normal"] 4
 assign [class="Doublecmd" window_type="normal"] 6
