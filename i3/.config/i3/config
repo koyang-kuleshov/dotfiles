@@ -201,25 +201,27 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
+# Autostart
+
+exec compton -f --vsync drm
+exec nitrogen --restore
 # Start polybar to display a workspace bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id pasystray &
 exec --no-startup-id numlockx on
 
-# Autostart
 exec --no-startup-id keepassxc
 exec --no-startup-id google-chrome
 exec --no-startup-id doublecmd
 exec --no-startup-id thunderbird
 exec --no-startup-id telegram-desktop
-exec --no-startup-id telegram-desktop
 
 bindsym Print exec spectacle
 bindsym $mod+F10 exec pavucontrol
-bindsym XF86Calculator exec --no-startup-id xcacl
+bindsym XF86Calculator exec --no-startup-id gnome-calculator
 
-# Special cases 
+# Special cases
 
 # Telegram
 for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
@@ -227,17 +229,18 @@ for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
 # Anki
 for_window [class="Anki" instance="anki" title="Add"] floating enable, resize set 680 480, move position center
 for_window [class="Anki" instance="anki" title="^Browse.+"] floating enable, resize set 1900 1040, move position center
+for_window [class="Anki" instance="anki" title="^Edit.+"] floating enable, resize set 600 840, move position center
 
 for_window [class="gimp"] fullscreen enable
-for_window [class="XCalc" instance="xcalc"] floating enable, resize set 230 420, move position center
+for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable, resize set 230 420, move position center
 
 # Assignments
 
 assign [class="nvim"] 2
-assign [class="keepassxc"] 3
+assign [class="keepassxc"] 1
 assign [class="chrome" window_type="normal"] 3
 assign [class="firefox" window_type="normal"] 4
-assign [class="doublecmd" window_type="normal"] 6
+assign [class="Doublecmd" window_type="normal"] 6
 assign [class="Thunderbird"] 9
 assign [class="TelegramDesktop"] 10
 assign [class="Slack"] 10
