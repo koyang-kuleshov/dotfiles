@@ -21,9 +21,9 @@
             "percent": 0.25,
             "swallows": [
                {
-               // "class": "^keepassxc$",
-               // "instance": "^keepassxc$",
-               // "title": "^Основная\\ 2020\\ \\-\\ KeePassXC$"
+               "class": "^keepassxc$",
+               "instance": "^keepassxc$",
+               "title": "^Основная\\ 2020\\ \\-\\ KeePassXC$"
                }
             ],
             "type": "con"
@@ -42,9 +42,9 @@
             "percent": 0.25,
             "swallows": [
                {
-               // "class": "^TelegramDesktop$",
-               // "instance": "^telegram\\-desktop$",
-               // "title": "^Telegram$"
+               "class": "^TelegramDesktop$",
+               "instance": "^telegram\\-desktop$",
+               "title": "^Telegram$"
                }
             ],
             "type": "con"
@@ -63,10 +63,9 @@
             "percent": 0.25,
             "swallows": [
                {
-               // "class": "^Slack$",
-               // "instance": "^slack$",
-               // "title": "^Slack\\ \\|\\ edu_courses\\ \\|\\ opendatascience$",
-               // "window_role": "^browser\\-window$"
+               "class": "^Slack$",
+               "instance": "^slack$",
+               "window_role": "^browser\\-window$"
                }
             ],
             "type": "con"
@@ -85,10 +84,10 @@
             "percent": 0.25,
             "swallows": [
                {
-               // "class": "^discord$",
-               // "instance": "^discord$",
-               // "title": "^Discord$",
-               // "window_role": "^browser\\-window$"
+               "class": "^discord$",
+               "instance": "^discord$",
+               "title": "^Discord$",
+               "window_role": "^browser\\-window$"
                }
             ],
             "type": "con"

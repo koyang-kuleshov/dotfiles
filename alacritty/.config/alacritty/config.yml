@@ -8,7 +8,7 @@ window:
     y: 0
   dynamic_padding: false
 # Под декорациями имеется ввиду вид окна (transparent сделает края невидимыми)
-  decorations: none
+  decorations: full
 
   startup_mode: Fullscreen # Windowed - оконный, Maximized - оконный на весь экран, Fullscreen - на весь экран
 

@@ -277,6 +277,6 @@ assign [class="firefox" window_type="normal"] 4
 assign [class="Doublecmd" window_type="normal"] 6
 assign [class="Thunderbird"] 7
 assign [class="keepassxc"] 10
-assign [class="TelegramDesktop"] 8
-assign [class="Slack"] 8
-assign [class="discord"] 8
+assign [class="TelegramDesktop"] 10
+assign [class="Slack"] 10
+assign [class="discord"] 10
