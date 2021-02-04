@@ -10,6 +10,7 @@ foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
+tray = #604387
 alert = #bd2c40
 
 [bar/mainbar]
@@ -76,10 +77,10 @@ blacklist-1 = scroll lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+format-prefix-underline = ${colors.primary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+label-layout-underline = ${colors.primary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -112,7 +113,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= #9979C3
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
