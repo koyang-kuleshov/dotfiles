@@ -63,14 +63,14 @@ bindsym $mod+Tab workspace prev
 # bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
+# installed. Replaced by j4-dmenu-desktop - faster from default repo
 bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+i focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -233,10 +233,12 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
-# Autostart
+# AUTOSTART
 
 exec compton -f --vsync drm
 exec nitrogen --restore
+# Restore workspace 10 layout
+# i3-save-tree --workspace 10 > ~/dotfiles/i3/.config/i3/workspace-10.json
 exec --no-startup-id "i3-msg 'workspace 10; append_layout ~/.config/i3/workspace-10.json'"
 
 # Start polybar to display a workspace bar
@@ -256,7 +258,7 @@ bindsym Print exec spectacle
 bindsym $mod+F10 exec pavucontrol
 bindsym XF86Calculator exec --no-startup-id gnome-calculator
 
-# Special cases
+# SPECIAL CASES
 
 # Telegram
 for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
@@ -269,7 +271,7 @@ for_window [class="Anki" instance="anki" title="^Edit.+"] floating enable, resiz
 for_window [class="gimp"] fullscreen enable
 for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable, resize set 230 420, move position center
 
-# Assignments
+# ASSIGNMENTS
 
 assign [class="nvim"] 1
 assign [class="chrome" window_type="normal"] 3

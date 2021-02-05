@@ -23,7 +23,6 @@
                {
                "class": "^keepassxc$",
                "instance": "^keepassxc$",
-               "title": "^Основная\\ 2020\\ \\-\\ KeePassXC$"
                }
             ],
             "type": "con"
@@ -86,8 +85,6 @@
                {
                "class": "^discord$",
                "instance": "^discord$",
-               "title": "^Discord$",
-               "window_role": "^browser\\-window$"
                }
             ],
             "type": "con"
