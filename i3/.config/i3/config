@@ -34,7 +34,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # The default_border 2
-default_border pixel 0
+default_border pixel 2
 hide_edge_borders smart
 
 # Use pactl to adjust volume in PulseAudio.

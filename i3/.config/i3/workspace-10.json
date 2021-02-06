@@ -22,7 +22,7 @@
             "swallows": [
                {
                "class": "^keepassxc$",
-               "instance": "^keepassxc$",
+               "instance": "^keepassxc$"
                }
             ],
             "type": "con"
@@ -84,7 +84,7 @@
             "swallows": [
                {
                "class": "^discord$",
-               "instance": "^discord$",
+               "instance": "^discord$"
                }
             ],
             "type": "con"
