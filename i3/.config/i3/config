@@ -260,6 +260,15 @@ bindsym XF86Calculator exec --no-startup-id gnome-calculator
 
 # SPECIAL CASES
 
+# Google Chrome
+for_window [class="Google-chrome"] border pixel 1
+
+# Double Commander
+for_window [class="Doblecmd" instance="doublecmd" title="^Double.+"] border pixel 1
+
+# Mozilla Firefox
+for_window [class="Thunderbird" instance="Mail"] border pixel 1
+
 # Telegram
 for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
 
