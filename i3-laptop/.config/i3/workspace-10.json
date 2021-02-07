@@ -1,0 +1,94 @@
+// vim:ts=4:sw=4:et
+{
+    // tabbed split container with 4 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "percent": null,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1013,
+               "width": 1680,
+               "x": 0,
+               "y": 37
+            },
+            "name": "Основная 2020 - KeePassXC",
+            "percent": 0.25,
+            "swallows": [
+               {
+               "class": "^keepassxc$",
+               "instance": "^keepassxc$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "user_off",
+            "geometry": {
+               "height": 1024,
+               "width": 1676,
+               "x": 2,
+               "y": 24
+            },
+            "name": "Telegram",
+            "percent": 0.25,
+            "swallows": [
+               {
+               "class": "^TelegramDesktop$",
+               "instance": "^telegram\\-desktop$",
+               "title": "^Telegram$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1024,
+               "width": 836,
+               "x": 842,
+               "y": 24
+            },
+            "name": "Slack | edu_courses | opendatascience",
+            "percent": 0.25,
+            "swallows": [
+               {
+               "class": "^Slack$",
+               "instance": "^slack$",
+               "window_role": "^browser\\-window$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1010,
+               "width": 940,
+               "x": 323,
+               "y": 18
+            },
+            "name": "Discord",
+            "percent": 0.25,
+            "swallows": [
+               {
+               "class": "^discord$",
+               "instance": "^discord$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
