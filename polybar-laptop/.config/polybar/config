@@ -281,17 +281,18 @@ battery = BAT0
 adapter = AC0
 full-at = 98
 label-font = 3
+time-format = %H:%M
 
-label-full = %percentage%
-
-format-charging = <animation-charging> <label-charging>
+label-charging = %percentage%
+format-charging = <ramp-capacity> <label-charging>
 format-charging-underline = #ffb52a
 
 label-discharging = %time%
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${colors.battery-discharging}
 
-format-full-prefix = " "
+label-full = %percentage%
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${colors.battery-full}
 
@@ -386,7 +387,7 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label> <bar>
-label = BL
+label = %percentage%
 
 bar-width = 10
 bar-indicator = |
@@ -398,6 +399,7 @@ bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -412,7 +414,7 @@ margin-bottom = 5
 
 [module/weather]
 type = custom/script
-exec = python3 ~/dotfiles/polybar/.config/polybar/polybar-weather/polybarWeather.py -i 498817 -a ea249a8436d2ddf036c670a6d02f58a9 -t Celcius
+exec = python3 ~/dotfiles/polybar/.config/polybar/polybar-weather/polybarWeather.py -i 498817 -a ea249a8436d2ddf036c670a6d02f58a9 -t Celcius -l ru
 
 
 ; vim:ft=dosini
