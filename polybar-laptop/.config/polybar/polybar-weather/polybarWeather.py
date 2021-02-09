@@ -62,11 +62,15 @@ o_type_ = correct_argument(ids.o_type)
 lang_id = correct_argument(ids.lang_id)
 
 def getWeatherByCityID(c_id, a_id=app_id_):
-        r = requests.get('http://api.openweathermap.org/data/2.5/weather?id='+ city_id_ + '&appid=' + app_id_)
+        r = requests.get(
+            'http://api.openweathermap.org/data/2.5/weather?id=' + \
+            city_id_ + '&appid=' + app_id_ + '&lang=' + lang_id)
         return r.json()
 
 def getWeatherByZipCode(z_code, c_code, a_id=app_id_):
-        r = requests.get('http://api.openweathermap.org/data/2.5/weather?zip='+ z_code + ',' + c_code + '&appid=' + app_id_)
+        r = requests.get('http://api.openweathermap.org/data/2.5/weather?zip=' + \
+                         z_code + ',' + c_code + '&appid=' + app_id_ + \
+                         '&lang=' + lang_id)
         return r.json()
 
 def degreeType(temp, d_type):
@@ -85,6 +89,7 @@ if __name__ == "__main__":
                         r = getWeatherByCityID(city_id_)
                 elif zip_code_ is not None and country_code_ is not None:
                         r = getWeatherByZipCode(zip_code_, country_code_)
+
         city = r['name']
         temp = int(r['main']['temp'])
         humidity = r['main']['humidity']
