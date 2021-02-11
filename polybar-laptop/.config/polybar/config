@@ -56,8 +56,8 @@ font-2 = siji:pixelsize=10;1
 modules-left = i3
 modules-center = weather
 
-; Setings for desktop
-modules-right = pulseaudio backlight-acpi xkeyboard filesystem memory cpu battery temperature date
+; Setings for laptop
+modules-right = xkeyboard pulseaudio backlight-acpi filesystem memory cpu battery temperature date
 
 ; Setings for desktop
 ; modules-right = pulseaudio xkeyboard memory cpu temperature date
@@ -86,11 +86,11 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.primary}
+; format-prefix-foreground = ${colors.foreground-alt}
+; format-prefix-underline = ${colors.primary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.primary}
+; label-layout-underline = ${colors.primary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -103,7 +103,8 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+; label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = " %percentage_used%%"
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -223,12 +224,13 @@ label = %time% %date%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume = <label-volume> <bar-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = 
 label-muted-foreground = #666
+
+format-volume =  <label-volume>
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -386,8 +388,8 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = %percentage%
+format = <label>
+label =  %percentage%
 
 bar-width = 10
 bar-indicator = |
