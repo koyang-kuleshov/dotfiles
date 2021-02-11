@@ -48,10 +48,9 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = weather
-; modules-right = filesystem xbacklight memory cpu battery temperature date powermenu
 
 ; Setings for desktop
-modules-right = pulseaudio xkeyboard memory cpu temperature date
+modules-right = xkeyboard pulseaudio memory cpu temperature date
 
 tray-position = right
 tray-padding = 2
@@ -77,11 +76,11 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.primary}
+; format-prefix-foreground = ${colors.foreground-alt}
+; format-prefix-underline = ${colors.primary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.primary}
+; label-layout-underline = ${colors.primary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -189,7 +188,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = 
+interface =
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -243,12 +242,13 @@ label = %time% %date%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume = <label-volume> <bar-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = 
 label-muted-foreground = #666
+
+format-volume =  <label-volume>
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
