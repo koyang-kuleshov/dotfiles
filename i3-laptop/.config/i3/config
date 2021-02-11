@@ -259,6 +259,9 @@ for_window [class="Google-chrome"] border pixel 1
 # Mozilla Firefox
 for_window [class="Thunderbird" instance="Mail"] border pixel 1
 
+# Zoom
+for_window [class="zoom"] border pixel 1 floating enable
+
 # Telegram
 for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
 
