@@ -260,7 +260,7 @@ for_window [class="Google-chrome"] border pixel 1
 for_window [class="Thunderbird" instance="Mail"] border pixel 1
 
 # Zoom
-for_window [class="zoom"] border pixel 1 floating enable
+for_window [class="zoom"] floating enable, resize set 880 680, move position center
 
 # Telegram
 for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
