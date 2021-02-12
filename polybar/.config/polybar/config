@@ -210,7 +210,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = 
+interface =
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -228,7 +228,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
+date = " %a, %d.%m.%Y"
 date-alt = " %d-%m-%Y"
 
 time = " %H:%M"
