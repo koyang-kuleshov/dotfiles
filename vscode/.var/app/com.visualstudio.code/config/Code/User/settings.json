@@ -1,0 +1,25 @@
+{
+    "terminal.integrated.shell.linux": "/usr/bin/env",
+    "terminal.integrated.shellArgs.linux": ["--", "flatpak-spawn", "--host", "bash"],
+    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "editor.cursorBlinking": "solid",
+    "files.autoSave": "afterDelay",
+    "workbench.commandPalette.history": 500,
+    "workbench.startupEditor": "none",
+    "workbench.preferredDarkColorTheme": "Gruvbox Dark (Medium)",
+    "workbench.preferredLightColorTheme": "Gruvbox Light (Hard)",
+    "vim.argumentObjectClosingDelimiters": [
+        ")",
+        "]",
+        "}"
+    ],
+    "vim.cursorStylePerMode.insert": "block",
+    "vim.cursorStylePerMode.normal": "block-outline",
+    "vim.hlsearch": true,
+    "workbench.activityBar.visible": false,
+    "vim.visualModeKeyBindingsNonRecursive": [
+    ],
+    "todo-tree.tree.showScanModeButton": false,
+    "pythonTestExplorer.testFramework": "pytest",
+    "python.testing.cwd": "pytest",
+}
