@@ -9,9 +9,10 @@ sudo apt install -y build-essential cmake cmake-data pkg-config python3-sphinx l
 
 # install soft
 echo "***** Install Flatpak applications *****"
-flatpak install flathub com.slack.Slack
-flatpak install io.dbeaver.DBeaverCommunity
-flatpak install flathub org.gnome.Fractal
+flatpak install -y flathub com.slack.Slack
+flatpak install -y io.dbeaver.DBeaverCommunity
+flatpak install -y flathub org.gnome.Fractal
+flatpak install -y flathub com.visualstudio.code
 
 # Stow
 cd ..
