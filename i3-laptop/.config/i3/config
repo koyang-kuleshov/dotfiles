@@ -277,7 +277,7 @@ for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enabl
 
 assign [class="nvim"] 1
 assign [class="chrome" window_type="normal"] 3
-assign [class="firefox" window_type="normal"] 4
+# assign [class="firefox" window_type="normal"] 4
 assign [class="Doublecmd" window_type="normal"] 6
 assign [class="Thunderbird"] 7
 assign [class="keepassxc"] 10
