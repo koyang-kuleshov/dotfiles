@@ -1,7 +1,7 @@
 echo "***** Update standart applications *****"
 sudo apt update
 sudo apt -y upgrade
-sudo apt install -y python3 python3-venv python3-pudb build-essential libssl-dev libffi-dev python3-dev exuberant-ctags pyflakes vim-gui-common neovim git
+sudo apt install -y python3 python3-venv python3-pudb build-essential libssl-dev libffi-dev python3-dev exuberant-ctags pyflakes vim-gui-common neovim git ipython jupyter-core python3-pip python3-matplotlib python3-scipy
 sudo apt install -y thunderbird anki gimp telegram-desktop discord doublecmd-common smplayer zathura zathura-djvu zathura-pdf-poppler stow htop tmux mc keepassxc freeplane xcompmgr guake
 sudo apt install -y i3 j4-dmenu-desktop kde-spectacle pavucontrol pasystray numlockx compton nitrogen alacritty
 sudo apt install -y build-essential cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libpulse-dev libjsoncpp-dev i3-wm light
@@ -54,7 +54,7 @@ echo "For setup Yandex disk run yandex-disk setup"
 
 
 echo "***** Remove temporary files *****"
-sudo apt -y autoremove
+sudo apt -y clean
 rm -f YANDEX-DISK-KEY.GPG
 rm -f yandex-disk_latest_amd64.deb
 rm -f google-chrome-stable_current_amd64.deb

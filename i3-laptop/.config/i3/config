@@ -238,6 +238,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id pasystray &
 exec --no-startup-id numlockx on
+exec --no-startup-id yandex-disk start
 
 exec --no-startup-id keepassxc
 exec --no-startup-id google-chrome

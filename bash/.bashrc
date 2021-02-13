@@ -133,4 +133,5 @@ if [ -f '/home/ma5ta/yandex-cloud/path.bash.inc' ]; then source '/home/ma5ta/yan
 
 # The next line enables shell command completion for yc.
 if [ -f '/home/ma5ta/yandex-cloud/completion.bash.inc' ]; then source '/home/ma5ta/yandex-cloud/completion.bash.inc'; fi
-
+# Path to jupyter
+export PATH=$PATH:~/.local/bin
