@@ -211,16 +211,17 @@ type = internal/date
 interval = 5
 
 date = " %a, %d.%m.%Y"
-date-alt = " %d-%m-%Y"
+date-alt =
 
 time = " %H:%M"
-time-alt = %H:%M:%S
+time-alt =
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %time% %date%
+format = %{A1:gnome-calendar:} <label> %{A}
 
 [module/pulseaudio]
 type = internal/pulseaudio

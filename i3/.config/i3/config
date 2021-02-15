@@ -283,6 +283,9 @@ for_window [class="Anki" instance="anki" title="^Edit.+"] floating enable, resiz
 for_window [class="gimp"] fullscreen enable
 for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable, resize set 230 420, move position center
 
+# Gnome Calaendar
+for_window [class="Gnome-calendar"] floating enable, resize set 830 600, move position 920 40
+
 # ASSIGNMENTS
 
 assign [class="nvim"] 1
