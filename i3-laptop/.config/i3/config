@@ -135,6 +135,8 @@ bindsym button3 floating toggle
 
 # The middle button over a titlebar kills the window
 bindsym --release button2 kill
+# The middle button and a modifer over any part of the window kills the window
+bindsym --whole-window $mod+button2 kill
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
