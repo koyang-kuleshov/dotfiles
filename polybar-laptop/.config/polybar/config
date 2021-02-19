@@ -49,7 +49,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 ; sudo apt install x11-utils
 ; After installing xfd run the view.sh script:
-; xset +fp siji
+; xset +fp ~/.local/share/fonts
 ; xset fp rehash${rs}
 ; ./view.sh
 ; echo -e "\ue24b"
