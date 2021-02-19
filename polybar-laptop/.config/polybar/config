@@ -49,6 +49,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 ; sudo apt install x11-utils
 ; After installing xfd run the view.sh script:
+; xset +fp siji
+; xset fp rehash${rs}
 ; ./view.sh
 ; echo -e "\ue24b"
 font-2 = siji:pixelsize=10;1
@@ -287,7 +289,7 @@ label-font = 3
 time-format = %H:%M
 
 label-charging = %percentage%
-format-charging = <ramp-capacity> <label-charging>
+format-charging =  <label-charging>
 format-charging-underline = #ffb52a
 
 label-discharging = %time%
