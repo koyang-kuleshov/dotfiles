@@ -2,3 +2,4 @@
 nvim/.config/nvim/autoload/
 nvim/.config/nvim/plugged/
 nvim/.config/nvim/session/
+pudb/.config/pudb/saved-breakpoints-*
