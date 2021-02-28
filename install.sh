@@ -32,6 +32,8 @@ stow dunst
 stow alacritty
 stow zathura
 stow polybar
+stow ipython
+stow jupyter
 
 # Google Chrome
 echo "***** Google Chrome Install *****"

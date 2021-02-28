@@ -36,6 +36,8 @@ stow xsession
 stow dunst
 stow alacritty
 stow zathura
+stow ipython
+stow jupyter
 cd laptop
 stow i3
 stow polybar
