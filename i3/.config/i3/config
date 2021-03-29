@@ -278,7 +278,7 @@ for_window [class="zoom"] floating enable, resize set 880 680, move position cen
 for_window [class="TelegramDesktop" title="Media viewer"] fullscreen enable
 
 # Anki
-for_window [class="Anki" instance="anki" title="Add"] floating enable, resize set 680 480, move position center
+for_window [class="Anki" instance="anki" title="Add"] floating enable, resize set 680 480, move position left
 for_window [class="Anki" instance="anki" title="^Browse.+"] floating enable, resize set 1900 1040, move position center
 for_window [class="Anki" instance="anki" title="^Edit.+"] floating enable, resize set 600 840, move position 120 300
 
@@ -287,6 +287,7 @@ for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enabl
 
 # Gnome Calaendar
 for_window [class="Gnome-calendar"] floating enable, border pixel 1, resize set 830 600, move position 2625 40
+for_window [class="Doublecmd"] floating enable, border pixel 1, resize set 430 200, move position center
 
 # ASSIGNMENTS
 
