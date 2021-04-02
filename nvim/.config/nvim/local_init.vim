@@ -307,3 +307,12 @@ let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+
+
+"=====================================================
+" Pyocstring settings
+"=====================================================
+" Possible values = ['google', 'numpy', 'sphinx']
+let g:pydocstring_formatter = 'google'
+nmap <silent> <C-s> <Plug>(pydocstring)
+let g:pydocstring_templates_path = '~/dotfiles/nvim/.config/nvim/docstring_templates'

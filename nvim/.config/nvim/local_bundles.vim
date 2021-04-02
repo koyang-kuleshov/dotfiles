@@ -17,3 +17,5 @@ Plug 'lepture/vim-jinja'
 Plug 'lpenz/vimcommander'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'lervag/vimtex'
+" Plug 'pixelneo/vim-python-docstring'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
