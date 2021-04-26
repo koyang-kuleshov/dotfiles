@@ -420,7 +420,7 @@ margin-bottom = 5
 
 [module/weather]
 type = custom/script
-exec = python3 ~/dotfiles/polybar/.config/polybar/polybar-weather/polybarWeather.py -i 498817 -a ea249a8436d2ddf036c670a6d02f58a9 -t Celcius -l ru
+exec = python3 ~/dotfiles/polybar/.config/polybar/polybar-weather/polybarweather.py -i 498817 -a ea249a8436d2ddf036c670a6d02f58a9 -t Celcius -l ru
 
 
 ; vim:ft=dosini

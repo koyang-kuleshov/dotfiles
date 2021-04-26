@@ -1,13 +1,10 @@
+'''Get weather condition from OpenWeather'''
 #!/bin/python
-
+import argparse
 import sys
 import requests
-import json
-import argparse
 
-class Ids:
-        pass
-ids = Ids()
+ids = {}
 parser = argparse.ArgumentParser()
 parser.add_argument(
     '-i',
@@ -46,32 +43,25 @@ parser.add_argument(
     dest='lang_id',
     default='en'
 )
-args = parser.parse_args(namespace=ids)
-
-def correct_argument(string):
-    if sys.version_info.major == 3:
-        return string
-    else:
-        return string.encode('utf-8')
-
-city_id_ = correct_argument(ids.city_id)
-app_id_ = correct_argument(ids.app_id)
-zip_code_ = correct_argument(ids.zip_code)
-country_code_ = correct_argument(ids.country_code)
-o_type_ = correct_argument(ids.o_type)
-lang_id = correct_argument(ids.lang_id)
+args = parser.parse_args()
+city_id_ = args.city_id
+app_id_ = args.app_id
+zip_code_ = args.zip_code
+country_code_ = args.country_code
+o_type_ = args.o_type
+lang_id = args.lang_id
 
 def getWeatherByCityID(c_id, a_id=app_id_):
-        r = requests.get(
+        req = requests.get(
             'http://api.openweathermap.org/data/2.5/weather?id=' + \
             city_id_ + '&appid=' + app_id_ + '&lang=' + lang_id)
-        return r.json()
+        return req.json()
 
 def getWeatherByZipCode(z_code, c_code, a_id=app_id_):
-        r = requests.get('http://api.openweathermap.org/data/2.5/weather?zip=' + \
+        req = requests.get('http://api.openweathermap.org/data/2.5/weather?zip=' + \
                          z_code + ',' + c_code + '&appid=' + app_id_ + \
                          '&lang=' + lang_id)
-        return r.json()
+        return req.json()
 
 def degreeType(temp, d_type):
         if d_type == 'Celcius':
@@ -86,14 +76,13 @@ def degreeType(temp, d_type):
 if __name__ == "__main__":
         if app_id_ is not None:
                 if city_id_ is not None:
-                        r = getWeatherByCityID(city_id_)
+                        request = getWeatherByCityID(city_id_)
                 elif zip_code_ is not None and country_code_ is not None:
-                        r = getWeatherByZipCode(zip_code_, country_code_)
-
-        city = r['name']
-        temp = int(r['main']['temp'])
-        humidity = r['main']['humidity']
-        weather = r['weather'][0]['description'].title()
+                        request = getWeatherByZipCode(zip_code_, country_code_)
+        city = request['name']
+        temp = int(request['main']['temp'])
+        humidity = request['main']['humidity']
+        weather = request['weather'][0]['description'].title()
         if o_type_ is not None:
                 print(weather + ' ' + degreeType(temp, o_type_))
         else:
