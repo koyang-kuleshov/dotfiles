@@ -1,4 +1,4 @@
-"""Summary of {{ name }}.
+'''Summary of {{ name }}.
 {% if params %}
 Args:
 {%- for p in params %}
@@ -21,4 +21,4 @@ Raises:
     {{ e }}:
 {%- endfor %}
 {% endif -%}
-"""
+'''
