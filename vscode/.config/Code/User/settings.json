@@ -1,0 +1,17 @@
+{
+    "workbench.startupEditor": "none",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "editor.fontSize": 18,
+    "terminal.integrated.fontSize": 18,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.mouseWheelZoom": true,
+    "editor.tokenColorCustomizations": null,
+    "files.autoSave": "afterDelay"
+}
