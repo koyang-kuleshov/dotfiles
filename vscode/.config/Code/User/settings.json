@@ -13,5 +13,8 @@
     },
     "editor.mouseWheelZoom": true,
     "editor.tokenColorCustomizations": null,
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "python.showStartPage": false,
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open"
 }
