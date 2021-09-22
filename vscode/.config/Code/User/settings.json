@@ -5,8 +5,8 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "editor.fontSize": 18,
-    "terminal.integrated.fontSize": 18,
+    "editor.fontSize": 20,
+    "terminal.integrated.fontSize": 19,
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
@@ -16,5 +16,9 @@
     "files.autoSave": "afterDelay",
     "python.showStartPage": false,
     "explorer.confirmDelete": false,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "jupyter.askForKernelRestart": false,
+    "explorer.confirmDragAndDrop": false,
+    "debug.console.fontSize": 19,
+    "editor.hover.enabled": false
 }

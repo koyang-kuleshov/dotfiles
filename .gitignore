@@ -5,3 +5,5 @@ nvim/.config/nvim/session/
 pudb/.config/pudb/saved-breakpoints-*
 *.swp
 *.vscode/
+ipython/*
+jupyter/.jupyter/migrated

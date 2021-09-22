@@ -184,7 +184,8 @@ let g:pymode_doc_key = 'M-k'
 
 " Linters
 let g:pymode_lint = 0
-let g:pymode_lint_checker = ['pylint', 'pyflakes', 'pep8']
+" let g:pymode_lint_checker = ['pylint']
+" let g:pymode_lint_checker = ['pylint', 'pyflakes', 'pep8']
 let g:pymode_lint_ignore= ['E501', 'W601', 'C0110', 'C0200', 'E402']
 let g:pymode_lint_cwindow = 0
 let g:pymode_lint_sort = ['E', 'C', 'I', 'W']
@@ -316,3 +317,10 @@ let g:tex_conceal='abdmg'
 let g:pydocstring_formatter = 'google'
 nmap <silent> <C-s> <Plug>(pydocstring)
 let g:pydocstring_templates_path = '~/dotfiles/nvim/.config/nvim/docstring_templates'
+
+
+"=====================================================
+" Vim-go settings
+"=====================================================
+" call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+let g:go_code_completion_enabled = 1

@@ -3,3 +3,5 @@
 	name = Michel Koyang-Kuleshov
 [core]
 	editor = vi
+[pull]
+	rebase = false

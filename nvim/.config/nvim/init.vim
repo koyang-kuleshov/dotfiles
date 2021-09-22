@@ -130,6 +130,11 @@ set backspace=indent,eol,start
 
 "" Tabs. May be overridden by autocmd rules
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 smarttab expandtab
+autocmd FileType go let b:go_fmt_options = {
+\ 'goimports': '-local ' .
+\ trim(system('{cd '. shellescape(expand('%:h')) .' && go list -m;}')),
+\ }
+
 set tabstop=4
 set softtabstop=0
 set shiftwidth=4
@@ -323,9 +328,9 @@ noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Git
 noremap <Leader>ga :Gwrite<CR>
-noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gsh :Gpush<CR>
-noremap <Leader>gll :Gpull<CR>
+noremap <Leader>gc :Git commit<CR>
+noremap <Leader>gsh :Git push<CR>
+noremap <Leader>gll :Git pull<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
@@ -381,7 +386,8 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories=['~/.config/nvim/plugged/ultisnips/', 'UltiSnips']
+let g:UltiSnipsSnippetDirectories=['~/dotfiles/nvim/.config/nvim/plugged/ultisnips/', 'UltiSnips']
+let g:ultisnips_python_quoting_style='single'
 
 " ale
 let g:ale_linters = {'python': ['pylint']}
@@ -389,13 +395,13 @@ let g:ale_linters = {'python': ['pylint']}
 let g:ale_python_pylint_options = '--disable=import-error'
 " let g:ale_linters_ignore = {}
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines']
-\   }
-let g:ale_lint_on_enter = 0
+            \   '*': ['remove_trailing_lines'],
+            \'python': ['reorder-python-imports', 'autopep8']}
+let g:ale_lint_on_enter = 1
 let g:ale_lint_on_filetype_changed = 0
 let g:ale_lint_on_text_changed = 0
-let g:ale_lint_on_insert_leave = 0
-let g:ale_fix_on_save = 1
+let g:ale_lint_on_insert_leave = 1
+let g:ale_fix_on_save = 0
 nmap <silent> <leader>k <Plug>(ale_previous_wrap)
 nmap <silent> <leader>j <Plug>(ale_next_wrap)
 nmap <silent> <leader>l :ALELint
@@ -485,8 +491,9 @@ augroup END
 
 " ale
 " \'python': ['pylint', 'pycodestyle', 'flake8'], })
-:call extend(g:ale_linters, {
-      \'python': ['pylint', 'pycodestyle'], })
+" TODO: Uncomment next strings if ale not work
+" call extend(g:ale_linters, {
+"       \'python': ['pylint', 'pycodestyle'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1

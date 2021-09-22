@@ -25,3 +25,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+export GOPATH=$HOME/coding/go-projects
+export AIRFLOW_HOME=$HOME/coding/airflow
