@@ -11,6 +11,9 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "editor.rulers": [
+        79
+    ],
     "editor.mouseWheelZoom": true,
     "editor.tokenColorCustomizations": null,
     "files.autoSave": "afterDelay",
@@ -20,5 +23,75 @@
     "jupyter.askForKernelRestart": false,
     "explorer.confirmDragAndDrop": false,
     "debug.console.fontSize": 19,
-    "editor.hover.enabled": false
+    "editor.hover.enabled": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.tabCompletion": "on",
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    // "vim.overrideCopy": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "d"],
+            "after": ["d", "d"]
+        },
+        {
+            "before": ["<C-n>"],
+            "commands": [":nohl"]
+        }
+    ],
+    "vim.operatorPendingModeKeyBindings": [
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": ["H"],
+            "after": ["^"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.leader": ",",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "tabout.disableByDefault": false,
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
 }
