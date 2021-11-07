@@ -17,7 +17,9 @@ battery-discharging = #ff5c00
 
 [bar/mainbar]
 ; xrandr --output <output> --primary
-monitor = eDP1
+monitor =
+monitor-fallback = eDP1
+monitor-strict = false
 width = 100%
 height = 30
 ;offset-x = 1%

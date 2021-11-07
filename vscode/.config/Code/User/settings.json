@@ -29,7 +29,7 @@
     "editor.suggestOnTriggerCharacters": false,
     "editor.tabCompletion": "on",
     "workbench.colorTheme": "Gruvbox Material Dark",
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoredocstringTrimWhitespace": false,
     "window.zoomLevel": 1,
     "editor.minimap.enabled": false,
     "vim.easymotion": true,
@@ -94,4 +94,5 @@
         "**/templates/**/*": "django-txt",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
+    "editor.largeFileOptimizations": false,
 }

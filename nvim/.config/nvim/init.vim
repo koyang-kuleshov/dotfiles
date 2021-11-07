@@ -62,15 +62,15 @@ endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 
 "" Vim-Session
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+"" Plug 'xolox/vim-misc'
+"" Plug 'xolox/vim-session'
 
 "" Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 "" Color
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
@@ -161,10 +161,10 @@ set shell=/bin/sh
 endif
 
 " session management
-let g:session_directory = "~/.config/nvim/session"
-let g:session_autoload = "yes"
-let g:session_autosave = "yes"
-let g:session_command_aliases = 1
+" let g:session_directory = "~/.config/nvim/session"
+" let g:session_autoload = "yes"
+" let g:session_autosave = "yes"
+" let g:session_command_aliases = 1
 
 "*****************************************************************************
 "" Visual Settings
@@ -177,6 +177,7 @@ set number
 let no_buffers_menu=1
 " silent! colorscheme molokai
 
+set mouse=nv
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
@@ -337,10 +338,10 @@ noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 
 " session management
-nnoremap <leader>so :OpenSession<Space>
-nnoremap <leader>ss :SaveSession<Space>
-nnoremap <leader>sd :DeleteSession<CR>
-nnoremap <leader>sc :CloseSession<CR>
+" nnoremap <leader>so :OpenSession<Space>
+" nnoremap <leader>ss :SaveSession<Space>
+" nnoremap <leader>sd :DeleteSession<CR>
+" nnoremap <leader>sc :CloseSession<CR>
 
 "" Tabs
 nnoremap <Tab> gt

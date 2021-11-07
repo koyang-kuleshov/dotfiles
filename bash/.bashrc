@@ -92,6 +92,15 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Set python3 by default
+alias python=python3
+alias ipython=ipython3
+alias pudb=pudb3
+alias pip='pip3'
+
+# Set breakpoint() in Python to call pudb
+export PYTHONBREAKPOINT="pudb.set_trace"
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -119,15 +128,6 @@ fi
 # PS1 for showing current git branch
 export PS1='\[\033[01;32m\]\[\033[0m\033[0;32m\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1)$ '
 
-# Set python3 by default
-alias python=python3
-alias ipython=ipython3
-alias pudb=pudb3
-alias pip='pip3'
-
-# Set breakpoint() in Python to call pudb
-export PYTHONBREAKPOINT="pudb.set_trace"
-
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f '/home/ma5ta/yandex-cloud/path.bash.inc' ]; then source '/home/ma5ta/yandex-cloud/path.bash.inc'; fi
 
@@ -135,3 +135,8 @@ if [ -f '/home/ma5ta/yandex-cloud/path.bash.inc' ]; then source '/home/ma5ta/yan
 if [ -f '/home/ma5ta/yandex-cloud/completion.bash.inc' ]; then source '/home/ma5ta/yandex-cloud/completion.bash.inc'; fi
 # Path to jupyter
 export PATH=$PATH:~/.local/bin
+
+# ADD / in the end if Pentaho not start
+export PENTAHO_JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export GOPATH=$HOME/coding/go-projects
+export AIRFLOW_HOME=$HOME/coding/airflow

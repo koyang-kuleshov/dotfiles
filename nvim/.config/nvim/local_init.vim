@@ -9,10 +9,10 @@ set relativenumber
 set path+=**
 
 " Отключение стрелок
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+" noremap <Up> <NOP>
+" noremap <Down> <NOP>
+" noremap <Left> <NOP>
+" noremap <Right> <NOP>
 
 " Отключаем бэкапы и своп-файлы
 "set nobackup     " no backup files
@@ -53,7 +53,7 @@ endfunc
 
 
 "=====================================================
-"Autosave congig
+"Autosave config
 " ====================================================
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
@@ -61,7 +61,7 @@ let g:auto_save_silent = 1  " do not display the auto-save notification
 " autocmd FileType python let g:auto_save_postsave_hook = 'PymodeLint'  " this will run :TagsGenerate after each save
 
 "=====================================================
-"VimCommander congig
+"VimCommander config
 " ====================================================
 noremap <silent> <F9> :cal VimCommanderToggle()<CR>
 
@@ -311,7 +311,7 @@ let g:tex_conceal='abdmg'
 
 
 "=====================================================
-" Pyocstring settings
+" Pydocstring settings
 "=====================================================
 " Possible values = ['google', 'numpy', 'sphinx']
 let g:pydocstring_formatter = 'google'
