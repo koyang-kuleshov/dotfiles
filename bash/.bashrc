@@ -97,6 +97,7 @@ alias python=python3
 alias ipython=ipython3
 alias pudb=pudb3
 alias pip='pip3'
+alias vi="nvim ."
 
 # Set breakpoint() in Python to call pudb
 export PYTHONBREAKPOINT="pudb.set_trace"
@@ -137,6 +138,10 @@ if [ -f '/home/ma5ta/yandex-cloud/completion.bash.inc' ]; then source '/home/ma5
 export PATH=$PATH:~/.local/bin
 
 # ADD / in the end if Pentaho not start
-export PENTAHO_JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+# export PENTAHO_JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export PENTAHO_JAVA_HOME="/usr/lib/jvm/jdk1.8.0_301"
 export GOPATH=$HOME/coding/go-projects
 export AIRFLOW_HOME=$HOME/coding/airflow
+export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORM=wayland
+export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
