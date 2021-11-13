@@ -245,10 +245,9 @@ exec thunderbird
 exec telegram-desktop
 exec flatpak run com.slack.Slack
 # exec discord
-exec guake
 
 # BINDINGS
-
+bindsym Control+F12 /usr/bin/guake-toggle
 bindsym $mod+F10 exec pavucontrol
 bindsym XF86Calculator exec gnome-calculator
 bindsym $mod+Shift+I exec sh ~/idea/bin/idea.sh
@@ -274,10 +273,13 @@ for_window [class="Anki" instance="anki" title="^Browse.+"] floating enable, res
 for_window [class="Anki" instance="anki" title="^Edit.+"] floating enable, resize set 600 840, move position 120 300
 
 for_window [class="gimp"] fullscreen enable
-for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enable, resize set 230 420, move position center
+for_window [app_id="gnome-calculator"] floating enable, resize set 230 420, move position center focus
 
 # Gnome Calaendar
-for_window [class="Gnome-calendar"] floating enable, border pixel 1, resize set 830 600, move position 920 40
+for_window [app_id="gnome-calendar"] floating enable, border pixel 1, resize set 830 600, move position 920 40 focus
+
+# Gnome Weather
+for_window [app_id="org.gnome.Weather"] floating enable, border pixel 1, resize set 830 600, move position center focus
 
 # ASSIGNMENTS
 # swaymsg -t get_tree

@@ -160,11 +160,13 @@
     },
     "custom/clock": {
         "exec": "date +'%H:%M'",
+        "on-click": "gnome-calendar",
         "interval": 60
     },
     "custom/weather": {
         "exec": "python3 /home/michelkoyangkuleshov/dotfiles/weather-module/weather.py",
-        "interval": 6000
+        "on-click": "gnome-weather",
+        "interval": 3600
     },
 }
 
