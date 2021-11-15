@@ -6,6 +6,10 @@ output eDP-1 pos 0 0 res 1920x1080
 output HDMI-A-2 pos 1280 0 res 1920x1080
 output * bg /home/michelkoyangkuleshov/Pictures/Elan/2021-07-21 08-22-14-1920-1080.JPG stretch
 
+# Window title and gaps
+default_border pixel 2px
+# gaps inner 5px
+
 # set $mod Mod4
 set $mod Mod4
 set $alt Mod1
@@ -237,13 +241,13 @@ bindsym $mod+r mode "resize"
 # exec "i3-msg 'workspace 10; append_layout ~/.config/i3/workspace-10.json'"
 
 exec yandex-disk start
-exec gammastep
+# exec gammastep
 exec keepassxc
 exec google-chrome
 exec doublecmd
 exec thunderbird
-exec telegram-desktop
-exec flatpak run com.slack.Slack
+# exec telegram-desktop
+# exec flatpak run com.slack.Slack
 # exec discord
 
 # BINDINGS
@@ -305,16 +309,17 @@ exec_always mako --font 'Source Code Pro 10' --background-color '#fdf6e3' --text
 
 # INPUT
 # swaymsg -t get_inputs
-input * {
+
+input "type:keyboard" {
     xkb_layout us,ru
     xkb_options grp:alt_shift_toggle,caps:escape
+    xkb_numlock enabled
 }
 
-input 1:1:AT_Translated_Set_2_keyboard xkb_numlock enabled
-
-input 1267:12322:ELAN1200:00_04F3:3022_Mouse {
+input type:touchpad {
+    tap enabled
     click_method clickfinger
-    dwt enabled
+    dwt enablenableded
     natural_scroll enabled
     tap_button_map lmr
 }

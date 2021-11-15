@@ -95,4 +95,5 @@
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
     "editor.largeFileOptimizations": false,
+    "window.menuBarVisibility": "toggle",
 }
