@@ -21,14 +21,17 @@ scrolling:
 
 #####################    Настройка шрифтов    #####################
 font:
+  # curl https://gist.githubusercontent.com/lucasdavila/3875946/raw/1c100cae16a06bef154af0f290d665405b554b3b/install_source_code_pro.sh | sh
     normal:
-      family: "Fira Code"
+      family: "Source Code Pro"
+      style: "Regular"
     bold:
-      family: "Fira Code"
+      family: "Source Code Pro"
+      style: "Bold"
     italic:
-      family: "Fira Code"
-
-    size: 18.0 # Размер шрифта
+      family: "Source Code Pro"
+      style: "Italic"
+    size: 14.0 # Размер шрифта
 
 #Отступы у шрифта
     offset:

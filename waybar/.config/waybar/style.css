@@ -196,7 +196,9 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
+    background-color: transparent;
+    border-bottom: solid 2px #2980b9;
 }
 
 #idle_inhibitor {

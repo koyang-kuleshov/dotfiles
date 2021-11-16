@@ -9,7 +9,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/weather"],
-    "modules-right": ["sway/language", "keyboard-state", "backlight", "pulseaudio", "cpu", "memory", "temperature", "battery", "tray", "custom/clock"],
+    "modules-right": ["sway/language", "cpu", "memory", "temperature", "battery", "backlight", "pulseaudio", "tray", "custom/clock"],
     // Modules configuration
      "sway/workspaces": {
          "disable-scroll": false,
@@ -40,10 +40,9 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 10,
     },
     "clock": {
-        // "timezone": "Russia/Moscow",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%H:%M}",
         "format-alt": "{:%Y-%m-%d}"
@@ -86,7 +85,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{signalStrength}% ",
+        "format-wifi": " {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
