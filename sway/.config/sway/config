@@ -1,9 +1,9 @@
 # OUTPUT
 # man sway-output
-focus output HDMI-A-2
+# focus output HDMI-A-2
 output eDP-1 mode 1920x1080@60Hz scale 1.5
-output eDP-1 pos 0 0 res 1920x1080
-output HDMI-A-2 pos 1280 0 res 1920x1080
+output eDP-1 pos 1920 0 res 1920x1080
+output HDMI-A-2 pos 0 0 res 1920x1080
 output * bg /home/michelkoyangkuleshov/Pictures/Elan/2021-07-21 08-22-14-1920-1080.JPG stretch
 
 # Window title and gaps
@@ -197,16 +197,16 @@ bindsym $mod+Shift+r reload
 # exit i3 (logs you out of your X session)
 # Create Log out, Reboot, Poweroff bindings
 mode "(S)uspend, (L)ogout, (R)eboot, (P)oweroff" {
-        bindsym r exec systemctl reboot
-        bindsym s exec systemctl suspend; mode "default"
-        bindsym l exit
-        bindsym p exec systemctl poweroff
+        bindsym --to-code r exec systemctl reboot
+        bindsym --to-code s exec systemctl suspend; mode "default"
+        bindsym --to-code l exit
+        bindsym --to-code p exec systemctl poweroff
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym $mod+Shift+e mode "(S)uspend, (L)ogout, (R)eboot, (P)oweroff"
+bindsym --to-code $mod+Shift+e mode "(S)uspend, (L)ogout, (R)eboot, (P)oweroff"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -291,12 +291,13 @@ assign [class="nvim"] 1
 assign [class="chrome" window_type="normal"] 3
 assign [class="Doublecmd" window_type="normal"] 6
 assign [app_id="thunderbird"] 7
-assign [app_id="org.keepassxc.KeePassXC"] 5
+assign [app_id="org.keepassxc.KeePassXC"] 10
 assign [class="discord"] 9
 assign [app_id="telegramdesktop"] 10
 assign [class="Slack"] 10
 
 # SWAY CONFIG
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
