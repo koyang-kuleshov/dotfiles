@@ -252,11 +252,11 @@ exec flatpak run com.slack.Slack
 # exec discord
 
 # BINDINGS
-bindsym Control+F12 /usr/bin/guake-toggle
+
 bindsym $mod+F10 exec pavucontrol
 bindsym XF86Calculator exec gnome-calculator
-bindsym $mod+Shift+I exec sh ~/idea/bin/idea.sh
-bindsym $mod+Shift+P exec sh ~/pentaho-di/spoon.sh
+bindsym $mod+Shift+I exec sh ~/pycharm-community-2021.2.3/bin/pycharm.sh
+bindsym --to-code $mod+Shift+P exec sh ~/pentaho-di/spoon.sh
 
 # SPECIAL CASES
 
@@ -288,12 +288,12 @@ for_window [app_id="org.gnome.Weather"] floating enable, border pixel 1, resize 
 
 # ASSIGNMENTS
 # swaymsg -t get_tree
-assign [class="nvim"] 1
+# assign [class="nvim"] 1
 assign [class="chrome" window_type="normal"] 3
 assign [class="Doublecmd" window_type="normal"] 6
 assign [app_id="thunderbird"] 7
 assign [app_id="org.keepassxc.KeePassXC"] 10
-assign [class="discord"] 9
+# assign [class="discord"] 10
 assign [app_id="telegramdesktop"] 10
 assign [class="Slack"] 10
 
