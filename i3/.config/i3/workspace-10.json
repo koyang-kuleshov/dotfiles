@@ -17,11 +17,11 @@
                "x": 0,
                "y": 37
             },
-            "name": "Основная 2020 - KeePassXC",
+            "name": "Основная 2021 - KeePassXC",
             "percent": 0.25,
             "swallows": [
                {
-               "class": "^keepassxc$",
+               "class": "KeePassXC",
                "instance": "^keepassxc$"
                }
             ],
@@ -91,4 +91,3 @@
         }
     ]
 }
-

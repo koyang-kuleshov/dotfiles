@@ -97,7 +97,8 @@ alias python=python3
 alias ipython=ipython3
 alias pudb=pudb3
 alias pip='pip3'
-alias vi="nvim ."
+alias vi=nvim.appimage
+alias nvim=nvim.appimage
 
 # Set breakpoint() in Python to call pudb
 export PYTHONBREAKPOINT="pudb.set_trace"
@@ -147,3 +148,6 @@ export QT_QPA_PLATFORM=wayland
 export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
 export XDG_CURRENT_DESKTOP=sway
 export GDK_BACKEND=x11
+export FZF_DEFAULT_COMMAND='fd --type file --color=always'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS="--ansi"

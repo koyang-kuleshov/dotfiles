@@ -22,7 +22,7 @@ font pango:xos4 14
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 18
+font pango:DejaVu Sans Mono 18
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -98,7 +98,7 @@ bindsym $mod+h split v
 bindsym $mod+v split h
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym --to-code $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -242,7 +242,7 @@ bindsym $mod+r mode "resize"
 # exec "i3-msg 'workspace 10; append_layout ~/.config/i3/workspace-10.json'"
 
 exec yandex-disk start
-# exec gammastep
+exec gammastep
 exec keepassxc
 exec google-chrome
 exec doublecmd
@@ -256,7 +256,7 @@ exec flatpak run com.slack.Slack
 bindsym $mod+F10 exec pavucontrol
 bindsym XF86Calculator exec gnome-calculator
 bindsym $mod+Shift+I exec sh ~/pycharm-community-2021.2.3/bin/pycharm.sh
-bindsym --to-code $mod+Shift+P exec sh ~/pentaho-di/spoon.sh
+bindsym --to-code $mod+Shift+P exec sh ~/pentaho-di/spoon.sh &
 
 # SPECIAL CASES
 
@@ -304,10 +304,10 @@ exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activati
 
 # MAKO
 # Light
-exec_always mako --font 'Source Code Pro 10' --background-color '#fdf6e3' --text-color '#657b83' --default-timeout 5000 --width 400 --markup 1 --border-radius 5
+# exec_always mako --font 'Source Code Pro 10' --background-color '#fdf6e3' --text-color '#657b83' --default-timeout 5000 --width 400 --markup 1 --border-radius 5
 
 # Dark
-# exec_always mako --font 'Source Code Pro 10' --background-color '#002b36' --text-color '#839496' --default-timeout 5000 --width 400 --markup 1 --border-radius 5
+exec_always mako --font 'Source Code Pro 10' --background-color '#002b36' --text-color '#839496' --default-timeout 5000 --width 400 --markup 1 --border-radius 5
 
 # INPUT
 # swaymsg -t get_inputs

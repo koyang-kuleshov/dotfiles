@@ -100,49 +100,6 @@ nmap <Leader>l <Plug>(easymotion-overwin-line)
 map  <Leader>W <Plug>(easymotion-bd-w)
 nmap <Leader>W <Plug>(easymotion-overwin-w)
 
-"Включение проверки русского языка
-" map <C-x> :setlocal spell spelllang=ru_ru<CR>
-" map <C-z> :setlocal spell spelllang=<CR>
-
-
-"=====================================================
-" Incremental search
-"=====================================================
-map z/ <Plug>(incsearch-easymotion-/)
-nmap z/ <Plug>(incsearch-easymotion-/)
-map z? <Plug>(incsearch-easymotion-?)
-map zg/ <Plug>(incsearch-easymotion-stay)
-
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
-
-
-"=====================================================
-"Integration between Incremental search and Easymotion
-"=====================================================
-
-"You can use other keymappings like <C-l> instead of <CR> if you want to
-" use these mappings as default search and sometimes want to move cursor with
-" EasyMotion.
-function! s:incsearch_config(...) abort
-  return incsearch#util#deepextend(deepcopy({
-  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-  \   'keymap': {
-  \     "\<CR>": '<Over>(easymotion)'
-  \   },
-  \   'is_expr': 0
-  \ }), get(a:, 1, {}))
-endfunction
-
-noremap <silent><expr> /s  incsearch#go(<SID>incsearch_config())
-noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
-noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
-
 
 "=====================================================
 " SimplyFold settings
@@ -158,63 +115,72 @@ let b:SimpylFold_fold_import = 0    " Fold imports (buffer local)
 set list          " Display unprintable characters f12 - switches
 set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
 
-
 "=====================================================
-" Python-mode setting
+" Telescope settings
 "=====================================================
-" Autofold
-let g:pymode_folding = 0
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-let g:pymode_indent = 1
-let g:pymode_motion = 1
+nnoremap <leader>fc <cmd>Vim commands<cr>
+nnoremap <leader>fk <cmd>Vim keymaps<cr>
 
-" Autocompletion
-let g:pymode_rope = 1
-let g:pymode_rope_completion = 1
-let g:pymode_rope_complete_on_dot = 0
-let g:pymode_rope_autoimport = 1
-let g:pymode_rope_regenerate_on_write = 1
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
-" Remove whitespaces
-let g:pymode_trim_whitespaces = 1
-
-" Documentation
-let g:pymode_doc = 0
-let g:pymode_doc_key = 'M-k'
-
-" Linters
-let g:pymode_lint = 0
-" let g:pymode_lint_checker = ['pylint']
-" let g:pymode_lint_checker = ['pylint', 'pyflakes', 'pep8']
-let g:pymode_lint_ignore= ['E501', 'W601', 'C0110', 'C0200', 'E402']
-let g:pymode_lint_cwindow = 0
-let g:pymode_lint_sort = ['E', 'C', 'I', 'W']
-let g:pymode_lint_unmodified = 1
-let g:pymode_lint_message = 1
-let g:pymode_lint_signs = 1
-let g:pymode_lint_todo_symbol = 'WW'
-let g:pymode_lint_comment_symbol = 'CC'
-let g:pymode_lint_visual_symbol = 'RR'
-let g:pymode_lint_error_symbol = 'EE'
-let g:pymode_lint_info_symbol = 'II'
-let g:pymode_lint_pyflakes_symbol = 'FF'
-
-" Virtualenv
-let g:pymode_virtualenv = 1
-
-" Breakpoints
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_key = '<leader>b'
-
-" Syntax
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
-
-" возможность запускать код
-let g:pymode_run = 1
-
+nnoremap <leader>fc <cmd>lua require('telescope.builtin').commands()<cr>
+nnoremap <leader>fk <cmd>lua require('telescope.builtin').keymaps()<cr>
+lua << EOF
+require('telescope').setup{
+  defaults = {
+    -- Default configuration for telescope goes here:
+    -- config_key = value,
+    mappings = {
+      i = {
+        -- map actions.which_key to <C-h> (default: <C-/>)
+        -- actions.which_key shows the mappings for your picker,
+        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
+        ["<C-h>"] = "which_key"
+      }
+    }
+  },
+  pickers = {
+    -- Default configuration for builtin pickers goes here:
+    -- picker_name = {
+    --   picker_config_key = value,
+    --   ...
+    -- }
+    -- Now the picker_config_key will be applied every time you call this
+    -- builtin picker
+  },
+  extensions = {
+    -- Your extension configuration goes here:
+    -- extension_name = {
+    --   extension_config_key = value,
+    -- }
+    -- please take a look at the readme of the extension you want to configure
+  }
+}
+require('telescope').setup {
+  extensions = {
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    }
+  }
+}
+-- To get fzf loaded and working with telescope, you need to call
+-- load_extension, somewhere after setup function:
+require('telescope').load_extension('fzf')
+EOF
 "=====================================================
 " Markdown-preview settings
 "=====================================================
@@ -318,9 +284,3 @@ let g:pydocstring_formatter = 'google'
 nmap <silent> <C-s> <Plug>(pydocstring)
 let g:pydocstring_templates_path = '~/dotfiles/nvim/.config/nvim/docstring_templates'
 
-
-"=====================================================
-" Vim-go settings
-"=====================================================
-" call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-let g:go_code_completion_enabled = 1
