@@ -23,17 +23,17 @@ scrolling:
 font:
   # curl https://gist.githubusercontent.com/lucasdavila/3875946/raw/1c100cae16a06bef154af0f290d665405b554b3b/install_source_code_pro.sh | sh
     normal:
-      family: "Source Code Pro"
+      family: "Cousine"
       style: "Regular"
     bold:
-      family: "Source Code Pro"
+      family: "Cousine"
       style: "Bold"
     italic:
-      family: "Source Code Pro"
+      family: "Cousine"
       style: "Italic"
     size: 14.0 # Размер шрифта
 
-#Отступы у шрифта
+  # Отступы у шрифта
     offset:
       x: 0
       y: 0

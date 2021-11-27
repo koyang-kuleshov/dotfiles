@@ -8,11 +8,12 @@ set relativenumber
 "" Search down into subfolders
 set path+=**
 
-" Отключение стрелок
-" noremap <Up> <NOP>
-" noremap <Down> <NOP>
-" noremap <Left> <NOP>
-" noremap <Right> <NOP>
+" С этой строкой отлично форматирует html файл, который содержит jinja2
+au BufNewFile,BufRead *.html set filetype=htmldjango
+autocmd BufRead,BufNewFile *.conf let b:autoformat_autoindent=0
+
+" Типа 'Нажимает' на ESC при быстром нажатии jj, чтобы не тянутся
+imap jk <Esc>
 
 " Отключаем бэкапы и своп-файлы
 "set nobackup     " no backup files

@@ -5,7 +5,6 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "editor.fontSize": 20,
     "terminal.integrated.fontSize": 19,
     "notebook.cellToolbarLocation": {
         "default": "right",

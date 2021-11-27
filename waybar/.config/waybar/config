@@ -9,7 +9,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/weather"],
-    "modules-right": ["sway/language", "cpu", "memory", "temperature", "battery", "backlight", "pulseaudio", "tray", "custom/clock"],
+    "modules-right": ["sway/language", "cpu", "memory", "temperature", "battery", "pulseaudio", "tray", "custom/clock"],
     // Modules configuration
      "sway/workspaces": {
          "disable-scroll": false,
@@ -158,7 +158,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/clock": {
-        "exec": "date +'%H:%M'",
+        "exec": "date +'%H:%M %a %d-%m-%Y'",
         "on-click": "gnome-calendar",
         "interval": 60
     },

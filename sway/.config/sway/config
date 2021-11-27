@@ -51,65 +51,65 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
-bindsym $alt+F4 kill
+bindsym --to-code $mod+Shift+q kill
+bindsym --to-code $alt+F4 kill
 
 # alt+tab for cycling workspace
-bindsym $alt+Tab workspace next
-bindsym $alt+Shift+Tab workspace prev
-bindsym $mod+Tab workspace prev
+bindsym --to-code $alt+Tab workspace next
+bindsym --to-code $alt+Shift+Tab workspace prev
+bindsym --to-code $mod+Tab workspace prev
 
 # start wofi
 set $menu exec wofi --show drun -almGL
 bindsym --to-code $mod+d exec $menu
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+i focus up
-bindsym $mod+l focus right
+bindsym --to-code $mod+j focus left
+bindsym --to-code $mod+k focus down
+bindsym --to-code $mod+i focus up
+bindsym --to-code $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym --to-code $mod+Left focus left
+bindsym --to-code $mod+Down focus down
+bindsym --to-code $mod+Up focus up
+bindsym --to-code $mod+Right focus right
 
 # move workspace
-bindsym $mod+Control+Shift+Left move workspace to output left
-bindsym $mod+Control+Shift+Right move workspace to output left
+bindsym --to-code $mod+Control+Shift+Left move workspace to output left
+bindsym --to-code $mod+Control+Shift+Right move workspace to output left
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym --to-code $mod+Shift+j move left
+bindsym --to-code $mod+Shift+k move down
+bindsym --to-code $mod+Shift+l move up
+bindsym --to-code $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym --to-code $mod+Shift+Left move left
+bindsym --to-code $mod+Shift+Down move down
+bindsym --to-code $mod+Shift+Up move up
+bindsym --to-code $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split v
+bindsym --to-code $mod+h split v
 
 # split in vertical orientation
-bindsym $mod+v split h
+bindsym --to-code $mod+v split h
 
 # enter fullscreen mode for the focused container
 bindsym --to-code $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+bindsym --to-code $mod+s layout stacking
+bindsym --to-code $mod+t layout tabbed
+bindsym --to-code $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym --to-code $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym --to-code $mod+Shift+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -241,14 +241,15 @@ bindsym $mod+r mode "resize"
 # i3-save-tree --workspace 10 > ~/dotfiles/i3/.config/i3/workspace-10.json
 # exec "i3-msg 'workspace 10; append_layout ~/.config/i3/workspace-10.json'"
 
+exec xrdb -load ~/.Xresources
 exec yandex-disk start
-exec gammastep
+exec gammastep -m wayland
 exec keepassxc
 exec google-chrome
 exec doublecmd
 exec thunderbird
 # exec telegram-desktop
-exec flatpak run com.slack.Slack
+# exec flatpak run com.slack.Slack
 # exec discord
 
 # BINDINGS
@@ -295,19 +296,15 @@ assign [app_id="thunderbird"] 7
 assign [app_id="org.keepassxc.KeePassXC"] 10
 # assign [class="discord"] 10
 assign [app_id="telegramdesktop"] 10
-assign [class="Slack"] 10
+assign [app_id="Slack"] 10
 
 # SWAY CONFIG
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
-# MAKO
-# Light
-# exec_always mako --font 'Source Code Pro 10' --background-color '#fdf6e3' --text-color '#657b83' --default-timeout 5000 --width 400 --markup 1 --border-radius 5
-
-# Dark
-exec_always mako --font 'Source Code Pro 10' --background-color '#002b36' --text-color '#839496' --default-timeout 5000 --width 400 --markup 1 --border-radius 5
+# https://codeberg.org/dnkl/fnott
+exec fnott
 
 # INPUT
 # swaymsg -t get_inputs
