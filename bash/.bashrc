@@ -99,8 +99,9 @@ alias pudb=pudb3
 alias pip='pip3'
 alias vi=nvim.appimage
 alias nvim=nvim.appimage
-alias datagrip="sh ~/datagrip-2021.2.4/bin/datagrip.sh"
-alias pentaho="sh ~/pentaho-di/spoon.sh"
+alias pycharm="sh ~/pycharm-community-2021.2.3/bin/pycharm.sh &"
+alias datagrip="sh ~/datagrip-2021.2.4/bin/datagrip.sh &"
+alias pentaho="sh ~/pentaho-di/spoon.sh &"
 alias homework="cd ~/homework"
 alias dwh="cd ~/netology/2_dwh"
 

@@ -2,9 +2,13 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: Cousine Nerd Font, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0;
+}
+
+window.DP-1 * {
+  font-size: 18px;
 }
 
 window#waybar {
@@ -38,7 +42,8 @@ window#waybar.chromium {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 6 0 2px;
+    margin: 0 2 0 2px;
     background-color: transparent;
     color: #ffffff;
     /* Use box-shadow instead of border so the text isn't offset */
@@ -109,8 +114,9 @@ window#waybar.chromium {
 }
 
 #battery {
+    padding: 0 7px;
     border-bottom: solid 2px #fff;
-    /* background-color: #ffffff; */
+    /* background-color: #ccc; */
     color: #fff;
 }
 

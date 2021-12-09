@@ -21,15 +21,14 @@ scrolling:
 
 #####################    Настройка шрифтов    #####################
 font:
-  # curl https://gist.githubusercontent.com/lucasdavila/3875946/raw/1c100cae16a06bef154af0f290d665405b554b3b/install_source_code_pro.sh | sh
     normal:
-      family: "Cousine"
+      family: "Cousine Nerd Font"
       style: "Regular"
     bold:
-      family: "Cousine"
+      family: "Cousine Nerd Font"
       style: "Bold"
     italic:
-      family: "Cousine"
+      family: "Cousine Nerd Font"
       style: "Italic"
     size: 14.0 # Размер шрифта
 

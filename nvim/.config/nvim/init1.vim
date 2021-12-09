@@ -208,7 +208,7 @@ set titlestring=%F
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-set keymap=russian-jcukenwin
+" set keymap=russian-jcukenwin
 
 if exists("*fugitive#statusline")
 set statusline+=%{fugitive#statusline()}

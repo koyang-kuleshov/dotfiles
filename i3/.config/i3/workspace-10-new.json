@@ -1,0 +1,52 @@
+// vim:ts=4:sw=4:et
+{
+    // tabbed split container with 4 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "percent": null,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1013,
+               "width": 1680,
+               "x": 0,
+               "y": 37
+            },
+            "name": "Основная 2021 - KeePassXC",
+            "percent": 0.25,
+            "swallows": [
+               {
+               "class": "KeePassXC",
+               "instance": "^keepassxc$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1024,
+               "width": 836,
+               "x": 842,
+               "y": 24
+            },
+            "name": "Slack | edu_courses | opendatascience",
+            "percent": 0.25,
+            "swallows": [
+               {
+               "class": "^Slack$",
+               "instance": "^slack$",
+               "window_role": "^browser\\-window$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}

@@ -1,9 +1,10 @@
 [{
     "layer": "top", // Waybar at top layer
-    "output": "eDP-1",
+    "output": ["eDP-1", "DP-1"],
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 20, // Waybar height (to be removed for auto height)
-    // "width": 100%, // Waybar width
+    /* "height": 20, // Waybar height (to be removed for auto height) */
+    /* "font-size": 1.2em, */
+    /* // "width": 100%, // Waybar width */
     // "spacing": 2, // Gaps between modules (4px)
     // "margin": 0 2 0 0
     // Choose the order of the modules
@@ -14,16 +15,22 @@
      "sway/workspaces": {
          "disable-scroll": false,
          "all-outputs": true,
-         "format": "{name}: {icon}",
+         /* "format": "{name}: {icon}", */
+         "format": "{icon}",
          "format-icons": {
-             "1": "",
-             "4": "",
-             "6": "",
+             /* "1": "", */
+             /* "1": "", */
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "﬷",
+             "6": "",
              "7": "",
-             // "10": "",
+             "8": "",
+             "10": "",
              "urgent": "",
              "focused": "",
-             "default": ""
+             "default": "ﱣ"
          }
      },
     "keyboard-state": {
@@ -59,8 +66,8 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 75,
         // "format-critical": "{temperatureC}°C {icon}",
-        // "format": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        /* "format": "{temperatureC}°C", */
         "format-icons": ["", "", ""]
     },
     "backlight": {
@@ -73,15 +80,16 @@
         "states": {
             "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 10
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "{capacity}%",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format-charging": "{capacity}% ﮣ",
+        // "format-plugged": "ﮣ {capacity}%",
+        "format-alt": "{icon} {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""]
+        
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -95,7 +103,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         // "format": "{icon} {volume}% {format_source}",
-        "format": "{icon}{volume}%",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
