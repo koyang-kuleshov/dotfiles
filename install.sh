@@ -20,6 +20,8 @@ flatpak install -y flathub com.slack.Slack
 flatpak install -y io.dbeaver.DBeaverCommunity
 flatpak install -y flathub org.gnome.Fractal
 flatpak install -y flathub com.github.tchx84.Flatseal
+flatpak install -y flathub org.telegram.desktop
+flatpak install -y flathub com.getpostman.Postman
 
 # Stow
 echo "***** Stow settings *****"

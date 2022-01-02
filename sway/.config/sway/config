@@ -1,7 +1,7 @@
 # OUTPUT
 # man sway-output
 # focus output HDMI-A-2
-output eDP-1 mode 1920x1080@60Hz scale 1.5
+output eDP-1 mode 1920x1080@60Hz scale 1.25
 output eDP-1 pos 4480 0 res 1920x1080
 output HDMI-A-2 pos 0 0 res 1920x1080
 output DP-1 pos 1920 0 res 2560x1440@75Hz
@@ -239,7 +239,7 @@ exec keepassxc
 exec google-chrome
 exec doublecmd
 exec thunderbird
-# exec telegram-desktop
+exec flatpak run org.telegram.desktop
 # exec flatpak run com.slack.Slack
 # exec discord
 
@@ -247,8 +247,9 @@ exec thunderbird
 
 bindsym $mod+F10 exec pavucontrol
 bindsym XF86Calculator exec gnome-calculator
-bindsym $mod+Shift+I exec sh ~/pycharm-community-2021.2.3/bin/pycharm.sh
-bindsym --to-code $mod+Shift+P exec sh ~/pentaho-di/spoon.sh &
+bindsym $mod+Shift+p exec sh ~/pycharm-community-2021.2.3/bin/pycharm.sh
+bindsym --to-code $mod+Shift+p exec sh ~/pentaho-di/spoon.sh &
+bindsym --to-code $mod+Ctrl+d exec gnome-system-monitor
 
 # SPECIAL CASES
 
@@ -291,6 +292,8 @@ assign [app_id="thunderbird"] 7
 assign [app_id="org.keepassxc.KeePassXC"] 10
 # assign [class="discord"] 10
 assign [app_id="telegramdesktop"] 10
+assign [app_id="org.telegram.desktop"] 10
+
 assign [app_id="Slack"] 10
 
 # SWAY CONFIG
@@ -331,7 +334,7 @@ bindsym Print exec grim -g "$(slurp)" ~/Pictures/screen-"$(date +%s)".png
 # Display lock
 exec swayidle \
     timeout 1200 'sh ~/dotfiles/bin/run-swaylock.sh --grace 3 --fade-in 4' \
-    timeout 1800 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
+    # timeout 1800 'swaymsg "output * dpms off"' \
+    # resume 'swaymsg "output * dpms on"' \
     before-sleep 'sh ~/dotfiles/bin/run-swaylock.sh'
 
