@@ -35,7 +35,7 @@ return require('packer').startup(function()
     use 'jistr/vim-nerdtree-tabs'
     use 'majutsushi/tagbar'
     use 'easymotion/vim-easymotion'
-    use 'kien/ctrlp.vim'
+    -- use 'kien/ctrlp.vim'
 
     use 'tpope/vim-commentary'
     use 'tpope/vim-fugitive'
@@ -46,7 +46,6 @@ return require('packer').startup(function()
     use 'Yggdroot/indentLine'
     use 'vim-scripts/vim-auto-save'
     use 'tmhedberg/SimpylFold'
-    use {'iamcco/markdown-preview.nvim', run = 'cd app %% yarn install', cmd = 'MarkdownPreview'}
     use 'lervag/vimtex'
     use {'heavenshell/vim-pydocstring', run = 'make install' }
 

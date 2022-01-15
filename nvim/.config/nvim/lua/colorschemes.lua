@@ -1,4 +1,3 @@
-
 -- Цветовая схема
 vim.o.termguicolors = true      --  24-bit RGB colors
 vim.cmd'colorscheme gruvbox-material'
@@ -36,7 +35,7 @@ require'lualine'.setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff',
-                  {'diagnostics', sources={'nvim_lsp', 'coc'}}},
+                  {'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
     lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
@@ -66,4 +65,3 @@ require'lualine'.setup {
 --         colorscheme gruvbox-material
 --     endif
 -- endfunc
-

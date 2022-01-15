@@ -328,8 +328,15 @@ bar {
 }
 
 # Screenshots
-bindsym $mod+Print exec grim ~/Pictures/screen-"$(date +%s)".png
-bindsym Print exec grim -g "$(slurp)" ~/Pictures/screen-"$(date +%s)".png
+# capture active display to Picture directory
+bindsym Control+Print exec grim -t png "$(xdg-user-dir PICTURES)"/$(date +%Y-%m-%d_%H-%M-%S).png
+
+# capture the specified screen area to clipboard    
+bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
+    
+# capture the focused monitor to clipboard    
+bindsym Shift+Control+Print exec grim -t png -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy -t image/png
+
 
 # Display lock
 exec swayidle \
