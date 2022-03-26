@@ -65,7 +65,7 @@ return require('packer').startup(function()
     -- use 'ray-x/lsp_signature.nvim'
 
     -- Python
-    -- use 'fisadev/vim-isort'
+    use 'fisadev/vim-isort'
     use 'mitsuhiko/vim-jinja'
         -- HTML и CSS
     -----------------------------------------------------------

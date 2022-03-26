@@ -103,7 +103,7 @@ alias pycharm="sh ~/pycharm-community-2021.2.3/bin/pycharm.sh &"
 alias datagrip="sh ~/datagrip-2021.2.4/bin/datagrip.sh &"
 alias pentaho="sh ~/pentaho-di/spoon.sh &"
 alias homework="cd ~/homework"
-alias dwh="cd ~/netology/2_dwh"
+alias dwh="cd ~/homework/examples/2_dwh/"
 
 # Set breakpoint() in Python to call pudb
 export PYTHONBREAKPOINT="pudb.set_trace"

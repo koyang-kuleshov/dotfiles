@@ -3,6 +3,7 @@
 	name = Michel Koyang-Kuleshov
 [core]
 	editor = vi
+	autocrlf = input
 [pull]
 	rebase = false
 [init]
