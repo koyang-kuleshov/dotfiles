@@ -212,6 +212,17 @@ for _, lsp in ipairs(servers) do
   }
   require('gitsigns').setup()
 
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+
   -- cfg_sign = {
   -- debug = false, -- set to true to enable debug logging
   -- log_path = "debug_log_file_path", -- debug log path
@@ -264,6 +275,52 @@ for _, lsp in ipairs(servers) do
 -- -- note: on_attach deprecated
 -- require'lsp_signature'.on_attach(cfg, bufnr) -- no need to specify bufnr if you don't use toggle_key
 end
+
+-- Telescope config
+require('telescope').setup({
+  extensions = {
+    command_palette = {
+      {"File",
+        { "entire selection (C-a)", ':call feedkeys("GVgg")' },
+        { "save current file (C-s)", ':w' },
+        { "save all files (C-A-s)", ':wa' },
+        { "quit (C-q)", ':qa' },
+        { "file browser (C-i)", ":lua require'telescope'.extensions.file_browser.file_browser()", 1 },
+        { "search word (A-w)", ":lua require('telescope.builtin').live_grep()", 1 },
+        { "git files (A-f)", ":lua require('telescope.builtin').git_files()", 1 },
+        { "files (C-f)",     ":lua require('telescope.builtin').find_files()", 1 },
+      },
+      {"Help",
+        { "tips", ":help tips" },
+        { "cheatsheet", ":help index" },
+        { "tutorial", ":help tutor" },
+        { "summary", ":help summary" },
+        { "quick reference", ":help quickref" },
+        { "search help(F1)", ":lua require('telescope.builtin').help_tags()", 1 },
+      },
+      {"Vim",
+        { "reload vimrc", ":source $MYVIMRC" },
+        { 'check health', ":checkhealth" },
+        { "jumps (Alt-j)", ":lua require('telescope.builtin').jumplist()" },
+        { "commands", ":lua require('telescope.builtin').commands()" },
+        { "command history", ":lua require('telescope.builtin').command_history()" },
+        { "registers (A-e)", ":lua require('telescope.builtin').registers()" },
+        { "colorshceme", ":lua require('telescope.builtin').colorscheme()", 1 },
+        { "vim options", ":lua require('telescope.builtin').vim_options()" },
+        { "keymaps", ":lua require('telescope.builtin').keymaps()" },
+        { "buffers", ":Telescope buffers" },
+        { "search history (C-h)", ":lua require('telescope.builtin').search_history()" },
+        { "paste mode", ':set paste!' },
+        { 'cursor line', ':set cursorline!' },
+        { 'cursor column', ':set cursorcolumn!' },
+        { "spell checker", ':set spell!' },
+        { "relative number", ':set relativenumber!' },
+        { "search highlighting (F12)", ':set hlsearch!' },
+      }
+    }
+  }
+  })
+require('telescope').load_extension('command_palette')
 
 -- SQL server
 -- https://github.com/joe-re/sql-language-server

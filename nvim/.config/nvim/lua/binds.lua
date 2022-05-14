@@ -3,7 +3,7 @@ local default_opts = {noremap = true, silent = true}
 
 -- Системный буфер обмена
 map('v', 'y', 'y:call system("wl-copy", @@)<CR>', default_opts)
-map('n', '<C-S>c', '"+y', {})
+map('n', '<C-y>', '"+y', {})
 
 -- Comment line
 map('n', '<C-_>', ':Commentary<CR>', default_opts)
@@ -12,8 +12,8 @@ map('v', '<C-_>', ':Commentary<CR>', default_opts)
 -- Insert text above line
 map('n', '<Leader>p', '"+gP<CR>', default_opts)
 
-map('n', 'YY', '"+y<CR>', default_opts)
-map('n', 'XX', '"+x<CR>', default_opts)
+-- map('n', 'YY', '"+y<CR>', default_opts)
+-- map('n', 'XX', '"+x<CR>', default_opts)
 
 -- Типа 'Нажимает' на ESC при быстром нажатии jk, чтобы не тянутся
 map('i', 'jk', '<Esc>', {noremap = true})
@@ -47,13 +47,11 @@ map('c', 'W', 'w', default_opts)
 map('c', 'Q', 'q', default_opts)
 map('c', 'Qall', 'qall', default_opts)
 
--- map('n', 'C-S-s' <Plug>(pydocstring))
-
 -- Пролистнуть на страницу вниз / вверх (как в браузерах)
 map('n', '<Space>', '<PageDown> zz', default_opts)
 map('n', '<C-Space>', '<PageUp> zz', default_opts)
 
--- По F1 очищаем последний поиск с подсветкой
+-- По Leader+Space очищаем последний поиск с подсветкой
 map('n', '<Leader><Space>', ':nohl<CR>', default_opts)
 -- shift + F1 = удалить пустые строки
 map('n', '<S-F1>', ':g/^$/d<CR>', default_opts)
@@ -67,13 +65,21 @@ map('n', '<F2>', ':NERDTreeToggle<CR>', default_opts)
 map('n', '<F4>', ':TagbarToggle<CR>', default_opts)
 
 -- Telescope
-map('n', '<C-p>', 'require("telescope.builtin").buffers()<cr>', default_opts)
--- <F4> Поиск слова под курсором
-map('n', '<C-F5>', 'require("telescope.builtin").grep_string()<cr>', default_opts)
+map('n', '<C-p>', 'require("telescope.builtin").buffers()<CR>', default_opts)
+-- <C-F5> Поиск слова под курсором
+map('n', '<C-F5>', 'require("telescope.builtin").grep_string()<CR>', default_opts)
 -- <S-F4> Поиск слова в модальном окошке
-map('n', '<S-F5>', 'require("telescope.builtin").live_grep()<cr>', default_opts)
+map('n', '<S-F5>', 'require("telescope.builtin").live_grep()<CR>', default_opts)
 -- fzf
-map('n', '<C-a>', 'require("telescope.builtin").find_files()<cr>', default_opts)
+map('n', '<C-a>', 'require("telescope.builtin").find_files()<CR>', default_opts)
+map('n', '<C-H>', ':Telescope command_palette<CR>', default_opts)
 
 -- Invoke Pydocstring
-map('n', 'C-S-d', 'Pydocstring<CR>', default_opts)
+map('n', '<C-S-d>', 'Pydocstring<CR>', default_opts)
+
+-- VIM TEST
+map('n', '<Leader>t', ':TestNearest<CR>', default_opts)
+map('n', '<Leader>T', ':TestFile<CR>', default_opts)
+map('n', '<Leader>a', ':TestSuite<CR>', default_opts)
+map('n', '<Leader>l', ':TestLast<CR>', default_opts)
+map('n', '<Leader>g', ':TestVisit<CR>', default_opts)

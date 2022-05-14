@@ -34,40 +34,48 @@ return require('packer').startup(function()
     use 'scrooloose/nerdtree'
     use 'jistr/vim-nerdtree-tabs'
     use 'majutsushi/tagbar'
-    use 'easymotion/vim-easymotion'
-    -- use 'kien/ctrlp.vim'
 
     use 'tpope/vim-commentary'
-    use 'tpope/vim-fugitive'
     use 'tpope/vim-surround'
-    use 'christoomey/vim-system-copy'
+
+    use 'hrsh7th/cmp-path'
+    use 'tpope/vim-fugitive'
     use 'tpope/vim-rhubarb' -- required by fugitive to :Gbrowse
+
+-- cpiw => copy word into system clipboard
+-- cpi' => copy inside single quotes to system clipboard
+--- cvi' => paste inside single quotes from system clipboard
+-- cP => paste the content from system clipboard to the next line
+    use 'christoomey/vim-system-copy'
+
     use 'Raimondi/delimitMate'
     use 'Yggdroot/indentLine'
     use 'vim-scripts/vim-auto-save'
     use 'tmhedberg/SimpylFold'
-    use 'lervag/vimtex'
     use {'heavenshell/vim-pydocstring', run = 'make install' }
 
+    -- LSP-server
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
+    -- Autocomplition
+    use 'L3MON4D3/LuaSnip'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'saadparwaiz1/cmp_luasnip'
-    use 'hrsh7th/cmp-path'
-    use 'L3MON4D3/LuaSnip'
+
     use {'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'}
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { "LinArcX/telescope-command-palette.nvim" }
 
     use 'nvim-lua/plenary.nvim'
     use 'lewis6991/gitsigns.nvim'
     -- use 'ray-x/lsp_signature.nvim'
 
     -- Python
-    -- use 'fisadev/vim-isort'
     use 'mitsuhiko/vim-jinja'
         -- HTML и CSS
+    use 'vim-test/vim-test'
     -----------------------------------------------------------
     -- Подсвечивает закрывающий и откры. тэг. Если, где-то что-то не закрыто, то не подсвечивает.
     use 'idanarye/breeze.vim'
