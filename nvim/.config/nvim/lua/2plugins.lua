@@ -19,16 +19,16 @@ return require('packer').startup(function()
     use 'sainnhe/gruvbox-material'
     use 'jonathanfilip/vim-lucius'
     use 'kyazdani42/nvim-web-devicons'
-    -- use {
-    --   'nvim-lualine/lualine.nvim',
-    --   requires = {'kyazdani42/nvim-web-devicons', opt = true},
-    -- config = function()
-    --     require('lualine').setup()
-    -- end, }
-    -- use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons',
-    -- config = function()
-    --     require('bufferline').setup{}
-    -- end, }
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    config = function()
+        require('lualine').setup()
+    end, }
+    use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons',
+    config = function()
+        require('bufferline').setup{}
+    end, }
 
     -- Navigation
     use 'scrooloose/nerdtree'

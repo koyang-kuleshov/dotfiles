@@ -35,6 +35,12 @@ exec nm-applet
 # default_border pixel 2
 hide_edge_borders smart
 
+# https://codeberg.org/dnkl/fnott
+# exec fnott
+
+# https://github.com/emersion/mako
+exec mako
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -243,7 +249,7 @@ exec doublecmd
 exec thunderbird
 exec flatpak run org.telegram.desktop
 # exec flatpak run com.slack.Slack
-# exec discord
+exec flatpak run com.discordapp.Discord
 
 # BINDINGS
 
@@ -302,13 +308,6 @@ assign [app_id="Slack"] 1
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-
-# https://codeberg.org/dnkl/fnott
-# exec fnott
-
-# https://github.com/emersion/mako
-exec mako
-
 # INPUT
 # swaymsg -t get_inputs
 

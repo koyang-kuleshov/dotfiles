@@ -1,8 +1,8 @@
-# # Global values
+# Global values
 output=eDP-1
 max-visible=3
-width=300
-height=150
+# width=300
+# height=150
 # # stacking-order=bottom-up
 # # anchor=top-right
 margin=2

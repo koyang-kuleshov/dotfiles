@@ -251,7 +251,8 @@ exec compton -f --vsync drm
 exec nitrogen --restore
 # Restore workspace 10 layout
 # i3-save-tree --workspace 10 > ~/dotfiles/i3/.config/i3/workspace-10.json
-exec --no-startup-id "i3-msg 'workspace 10; append_layout ~/.config/i3/workspace-10-new.json'"
+# exec --no-startup-id "i3-msg 'workspace 10; append_layout ~/.config/i3/workspace-10-new.json'"
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-10-new.json'"
 
 # Start polybar to display a workspace bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -304,12 +305,12 @@ for_window [class="Gnome-calendar"] floating enable, border pixel 1, resize set 
 
 # ASSIGNMENTS
 
-assign [class="nvim"] 1
+assign [class="nvim"] 2
 assign [class="chrome" window_type="normal"] 3
 # assign [class="firefox" window_type="normal"] 4
 assign [class="Doublecmd" window_type="normal"] 6
 assign [class="Thunderbird"] 7
-assign [class="keepassxc"] 10
-assign [class="TelegramDesktop"] 10
-assign [class="Slack"] 10
-assign [class="discord"] 10
+assign [class="keepassxc"] 1
+assign [class="TelegramDesktop"] 1
+assign [class="Slack"] 1
+assign [class="discord"] 1

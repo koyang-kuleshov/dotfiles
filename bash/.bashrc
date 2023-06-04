@@ -103,6 +103,7 @@ alias datagrip="sh ~/datagrip-2021.2.4/bin/datagrip.sh &"
 alias pentaho="sh ~/pentaho-di/spoon.sh &"
 alias homework="cd ~/homework"
 alias dwh="cd ~/homework/examples/2_dwh/"
+alias cat=batcat
 
 # Set breakpoint() in Python to call pudb
 export PYTHONBREAKPOINT="pudb.set_trace"
@@ -156,3 +157,11 @@ export FZF_DEFAULT_COMMAND='fd --type file --color=always'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--ansi"
 export WLR_DRM_NO_MODIFIERS=1
+
+export KAFKA=109.120.182.255
+export LOCAL_STAND=true
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export BAT_CONFIG_PATH="~/.congig/bat/config"
