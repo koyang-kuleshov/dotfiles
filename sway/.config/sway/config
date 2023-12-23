@@ -2,9 +2,11 @@
 # man sway-output
 # focus output HDMI-A-2
 output eDP-1 mode 1920x1080@60Hz scale 1.25
-output eDP-1 pos 0 0 res 1920x1080
-output HDMI-A-2 pos 4100 0 res 1920x1080
-output DP-1 pos 1536 0 res 2560x1440@75Hz
+output eDP-1 pos 2560 0 res 1920x1080
+# output HDMI-A-2 pos 4100 0 res 1920x1080
+# output DP-1 pos 1536 0 res 2560x1440@75Hz
+output DP-1 pos 0 0 res 2560x1440@75Hz
+
 output eDP-1 bg /home/michelkoyangkuleshov/Pictures/Elan/2021-07-21 08-22-14-2560-1440.JPG stretch
 output DP-1 bg /home/michelkoyangkuleshov/Pictures/Elan/2021-07-21 08-22-14-2560-1440.JPG stretch
 output HDMI-A-2 bg /home/michelkoyangkuleshov/Pictures/Elan/2021-07-21 08-22-14-2560-1440.JPG stretch
