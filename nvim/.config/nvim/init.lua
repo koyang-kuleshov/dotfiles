@@ -1,25 +1,14 @@
-local fn = vim.fn
+-- Basic
+require('core.plugins')
+require('core.opts')
+require('core.binds')
 
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-end
-
-vim.cmd [[packadd packer.nvim]]
-
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
-
-
-vim.g.mapleader = ','
-
-require('plugins')
-require('colorschemes')
-require('opts') 
-require('binds')
-
-
+-- Plugins
+require('plugins.neotree')
+require('plugins.treesitter')
+require('plugins.telescope')
+require('plugins.lsp')
+require('plugins.cmp')
+require('plugins.buffline')
+require('plugins.lualine')
+require('plugins.whichkey')
