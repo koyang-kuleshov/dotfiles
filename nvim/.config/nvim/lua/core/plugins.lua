@@ -62,7 +62,7 @@ return require('lazy').setup({
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
     -- branch = '0.1.x',
-      dependencies = { 'nvim-lua/plenary.nvim' }
+      dependencies = {'nvim-lua/plenary.nvim'}
   },
 
   -- LSP
@@ -80,20 +80,14 @@ return require('lazy').setup({
 -- cpiw => copy word into system clipboard
 -- cpi' => copy inside single quotes to system clipboard
 -- cvi' => paste inside single quotes from system clipboard
--- cP => paste the content from system clipboard to the next line
+-- cP => copy the current line directly
+-- cV => paste the content of system clipboard to the next line
    {'christoomey/vim-system-copy'},
 
   -- Autocomplete
   {'hrsh7th/cmp-path'},
 	{'hrsh7th/nvim-cmp'},
   {'hrsh7th/cmp-nvim-lsp'},
-
-  -- Snipets
-  {'SirVer/ultisnips'},
-  {'quangnguyen30192/cmp-nvim-ultisnips'},
-
-  -- https://github.com/vim-test/vim-test
-  {'vim-test/vim-test'},
 
   -- Commenting with C-/
   {'tpope/vim-commentary'},
@@ -119,32 +113,49 @@ return require('lazy').setup({
   },
 
   -- Show CSS-colors #ffffff
-  {'ap/vim-css-color'},
-
-  -- Show bindings
-	{'folke/which-key.nvim', lazy = false},
-
-  -- TODO: Linting, paste above/before the line, autosave
+  -- {'ap/vim-css-color'},
 
   -- Linting
-  -- {'jose-elias-alvarez/null-ls.nvim'},
+  {
+		'nvimtools/none-ls.nvim',
+		dependencies = {'nvim-lua/plenary.nvim'}
+	},
+
+  -- Terminal
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
+
+  -- Даже если включена русская раскладка vim команды будут работать
+  {'powerman/vim-plugin-ruscmd'},
+
+  -- https://github.com/vim-test/vim-test
+  {'vim-test/vim-test'},
+
+  -- Autosave
+  {'vim-scripts/vim-auto-save'}
+
+  -- Snipets
+  -- {'SirVer/ultisnips'},
+  -- {'quangnguyen30192/cmp-nvim-ultisnips'},
+
+  -- Show bindings
+	-- {'folke/which-key.nvim', lazy = false},
 
 
+  -- TODO: check linter, autosave
 
-    -- 'vim-scripts/vim-auto-save'
+	-- {
+	-- 	'heavenshell/vim-pydocstring',
+	-- 	run = 'make install'
+	-- }
+
+
     -- 'tmhedberg/SimpylFold'
-    -- {'heavenshell/vim-pydocstring', run = 'make install' }
+
 
     -----------------------------------------------------------
     -- Подсвечивает закрывающий и откры. тэг. Если, где-то что-то не закрыто, то не подсвечивает.
     -- 'idanarye/breeze.vim'
-    -- Закрывает автоматом html и xml тэги. Пишешь <h1> и он автоматом закроется </h1>
-    -- 'alvan/vim-closetag'
-    -- Подсвечивает #ffffff
-    -- 'ap/vim-css-color'
 
-    -- Даже если включена русская раскладка vim команды будут работать
-    -- 'powerman/vim-plugin-ruscmd'
     -- 'Автоформатирование' кода для всех языков
     -- -- 'Chiel92/vim-autoformat'
     -- ]p - вставить на строку выше, [p - ниже
